@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 600" style="background-color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="4" dy="6" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <text x="625" y="60" font-size="32" font-weight="bold" fill="#0F172A" text-anchor="middle">SSH Protocol Architecture</text>
+
+  <rect x="350" y="100" width="500" height="70" rx="6" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+  <text x="600" y="135" font-size="20" font-weight="600" fill="#334155" text-anchor="middle">Application</text>
+  <text x="600" y="155" font-size="14" fill="#64748B" text-anchor="middle">(Terminal, SFTP, Port Forwarding)</text>
+
+  <text x="290" y="310" font-size="26" font-weight="bold" fill="#0F172A" text-anchor="end">SSH</text>
+  
+  <path d="M 325 200 L 310 200 L 310 410 L 325 410" fill="none" stroke="#0F172A" stroke-width="3" stroke-linejoin="round"/>
+
+  <rect x="350" y="200" width="500" height="210" rx="4" fill="#FFFFFF" stroke="#0F172A" stroke-width="3" filter="url(#shadow)"/>
+
+  <rect x="365" y="215" width="470" height="50" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/>
+  <text x="600" y="246" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">SSH-CONN</text>
+
+  <rect x="365" y="280" width="470" height="50" rx="2" fill="#BAE6FD" stroke="#38BDF8" stroke-width="2"/>
+  <text x="600" y="311" font-size="18" font-weight="bold" fill="#0369A1" text-anchor="middle">SSH-AUTH</text>
+
+  <rect x="365" y="345" width="470" height="50" rx="2" fill="#0EA5E9" stroke="#0284C7" stroke-width="2"/>
+  <text x="600" y="376" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SSH-TRANS</text>
+
+  <rect x="350" y="440" width="500" height="70" rx="6" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" stroke-dasharray="8,6"/>
+  <text x="600" y="475" font-size="20" font-weight="bold" fill="#0F172A" text-anchor="middle">TCP</text>
+  <text x="600" y="495" font-size="14" fill="#64748B" text-anchor="middle">(Transmission Control Protocol)</text>
+
+  <g fill="#334155" font-size="16">
+    <line x1="850" y1="240" x2="890" y2="240" stroke="#CBD5E1" stroke-width="3"/>
+    <text x="905" y="246">Multiplexes into multiple logical channels</text>
+    
+    <line x1="850" y1="305" x2="890" y2="305" stroke="#CBD5E1" stroke-width="3"/>
+    <text x="905" y="311">Authenticates the user (Passwords / Keys)</text>
+    
+    <line x1="850" y1="370" x2="890" y2="370" stroke="#CBD5E1" stroke-width="3"/>
+    <text x="905" y="364">Provides Encryption, Compression,</text>
+    <text x="905" y="386">and Server Authentication</text>
+  </g>
+
+</svg>

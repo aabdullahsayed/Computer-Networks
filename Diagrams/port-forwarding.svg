@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 700" style="background-color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#EF4444"/>
+    </marker>
+    <marker id="arrow-red-rev" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M10,1 L2,5 L10,9 z" fill="#EF4444"/>
+    </marker>
+
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-blue-rev" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M10,1 L2,5 L10,9 z" fill="#0284C7"/>
+    </marker>
+  </defs>
+
+  <text x="650" y="60" font-size="34" font-weight="800" fill="#0F172A" text-anchor="middle">SSH Port Forwarding (Tunneling)</text>
+  <text x="650" y="95" font-size="18" font-weight="500" fill="#64748B" text-anchor="middle">Securing application traffic over the public internet</text>
+
+  <rect x="60" y="150" width="360" height="490" rx="20" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="8 6"/>
+  
+  <g transform="translate(100, 180)">
+    <rect x="0" y="0" width="32" height="22" rx="3" fill="none" stroke="#475569" stroke-width="2"/>
+    <path d="M -6 28 L 38 28 L 34 22 L -2 22 Z" fill="#475569"/>
+  </g>
+  <text x="145" y="200" font-size="22" font-weight="700" fill="#1E293B">Local Client</text>
+  <text x="145" y="220" font-size="14" fill="#64748B">(Your Computer)</text>
+
+
+  <rect x="880" y="150" width="360" height="490" rx="20" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="8 6"/>
+  
+  <g transform="translate(920, 175)">
+    <rect x="0" y="0" width="32" height="14" rx="2" fill="none" stroke="#475569" stroke-width="2"/>
+    <rect x="0" y="18" width="32" height="14" rx="2" fill="none" stroke="#475569" stroke-width="2"/>
+    <circle cx="24" cy="7" r="2" fill="#475569"/>
+    <circle cx="24" cy="25" r="2" fill="#475569"/>
+  </g>
+  <text x="965" y="200" font-size="22" font-weight="700" fill="#1E293B">Remote Server</text>
+  <text x="965" y="220" font-size="14" fill="#64748B">(Destination)</text>
+
+
+  <path d="M 240 350 L 240 440" fill="none" stroke="#EF4444" stroke-width="4" marker-end="url(#arrow-red)" marker-start="url(#arrow-red-rev)"/>
+  
+  <rect x="255" y="380" width="120" height="30" rx="15" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
+  <text x="315" y="400" font-size="13" font-weight="600" fill="#DC2626" text-anchor="middle">Unencrypted</text>
+
+  <rect x="420" y="460" width="460" height="60" rx="30" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+  <path d="M 390 490 L 910 490" fill="none" stroke="#0284C7" stroke-width="6" marker-end="url(#arrow-blue)" marker-start="url(#arrow-blue-rev)"/>
+  
+  <text x="650" y="450" font-size="18" font-weight="700" fill="#0369A1" text-anchor="middle">Encrypted SSH Tunnel</text>
+  <text x="650" y="540" font-size="14" fill="#475569" text-anchor="middle">Data is safely encapsulated across the internet</text>
+
+  <g transform="translate(635, 475)">
+    <rect x="0" y="10" width="30" height="20" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="3"/>
+    <path d="M 6 10 L 6 5 C 6 -1 24 -1 24 5 L 24 10" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <path d="M 6 10 L 6 5 C 6 -1 24 -1 24 5 L 24 10" fill="none" stroke="#0284C7" stroke-width="3"/>
+    <circle cx="15" cy="20" r="3" fill="#0284C7"/>
+  </g>
+
+  <path d="M 1060 440 L 1060 350" fill="none" stroke="#EF4444" stroke-width="4" marker-end="url(#arrow-red)" marker-start="url(#arrow-red-rev)"/>
+  
+  <rect x="925" y="380" width="120" height="30" rx="15" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
+  <text x="985" y="400" font-size="13" font-weight="600" fill="#DC2626" text-anchor="middle">Unencrypted</text>
+
+
+  <rect x="100" y="260" width="280" height="90" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="100" y="260" width="280" height="8" fill="#64748B" rx="12" stroke="none" clip-path="inset(0 0 4px 0)"/>
+  <g transform="translate(130, 290)" fill="#94A3B8">
+    <path d="M2 4 C2 2.89 2.89 2 4 2 L12 2 L15 5 L26 5 C27.1 5 28 5.89 28 7 L28 22 C28 23.1 27.1 24 26 24 L4 24 C2.89 24 2 23.1 2 22 L2 4 Z"/>
+  </g>
+  <text x="175" y="305" font-size="20" font-weight="700" fill="#0F172A">FTP Client</text>
+  <text x="175" y="325" font-size="14" fill="#64748B">Insecure Application</text>
+
+  <rect x="100" y="440" width="280" height="90" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="100" y="440" width="280" height="8" fill="#0EA5E9" rx="12" stroke="none" clip-path="inset(0 0 4px 0)"/>
+  <g transform="translate(130, 468)" fill="none" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 3 L3 8 L3 15 C3 21.5 8.1 27.2 15 29 C21.9 27.2 27 21.5 27 15 L27 8 L15 3 Z"/>
+    <path d="M10 15 L14 19 L21 11"/>
+  </g>
+  <text x="175" y="485" font-size="20" font-weight="700" fill="#0284C7">SSH Client</text>
+  <text x="175" y="505" font-size="14" fill="#64748B">Listens on Local Port</text>
+
+
+  <rect x="920" y="260" width="280" height="90" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="260" width="280" height="8" fill="#64748B" rx="12" stroke="none" clip-path="inset(0 0 4px 0)"/>
+  <g transform="translate(950, 290)" fill="#94A3B8">
+    <path d="M4 2 C2.89 2 2 2.89 2 4 L2 24 C2 25.1 2.89 26 4 26 L20 26 C21.1 26 22 25.1 22 24 L22 8 L16 2 L4 2 Z"/>
+    <path d="M15 3 L15 9 L21 9" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  </g>
+  <text x="995" y="305" font-size="20" font-weight="700" fill="#0F172A">FTP Server</text>
+  <text x="995" y="325" font-size="14" fill="#64748B">Insecure Application</text>
+
+  <rect x="920" y="440" width="280" height="90" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="920" y="440" width="280" height="8" fill="#0EA5E9" rx="12" stroke="none" clip-path="inset(0 0 4px 0)"/>
+  <g transform="translate(945, 473)" fill="none" stroke="#0EA5E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="8" cy="8" r="5"/>
+    <path d="M12 12 L22 22 M22 22 L22 18 M19 19 L19 15"/>
+  </g>
+  <text x="995" y="485" font-size="20" font-weight="700" fill="#0284C7">SSH Server</text>
+  <text x="995" y="505" font-size="14" fill="#64748B">Forwards to Target Port</text>
+
+</svg>
