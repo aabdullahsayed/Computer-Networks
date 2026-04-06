@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 850" style="background-color: #FFFFFF; font-family: Georgia, 'Times New Roman', serif;">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <text x="700" y="60" font-size="32" font-weight="700" fill="#0F172A" text-anchor="middle">
+    Application Layer: SMTP and DNS Integration
+  </text>
+
+  <rect x="50" y="120" width="840" height="500" rx="16" fill="#F8FAFC" stroke="#94A3B8" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="80" y="165" font-size="22" font-weight="700" fill="#475569">
+    User's Computer (Application Layer) -> aperson@wonderful.com
+  </text>
+
+  <!-- User Input -->
+  <path d="M 220 70 L 220 235" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="240" y="140" font-size="20" font-weight="700" fill="#0F172A">User Input</text>
+
+  <!-- Internal DNS -->
+  <path d="M 340 310 L 565 310" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="455" y="290" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Request IP</text>
+  <text x="455" y="260" font-size="18" fill="#1D4ED8" text-anchor="middle">wonderful.com</text>
+
+  <path d="M 580 400 L 355 400" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="465" y="440" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">Return IP</text>
+  <text x="465" y="470" font-size="18" fill="#047857" text-anchor="middle">200.200.200.5</text>
+
+  <!-- External DNS -->
+  <path d="M 820 310 L 1045 310" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="935" y="290" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">External Query</text>
+  <text x="935" y="260" font-size="18" fill="#1D4ED8" text-anchor="middle">wonderful.com</text>
+
+  <path d="M 1060 400 L 835 400" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="945" y="440" font-size="18" font-weight="700" fill="#0F172A" text-anchor="middle">External Response</text>
+  <text x="945" y="470" font-size="18" fill="#047857" text-anchor="middle">200.200.200.5</text>
+
+  <!-- Downward -->
+  <path d="M 220 420 L 220 685" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="240" y="550" font-size="20" font-weight="700" fill="#0F172A">Pass to lower layer</text>
+  <text x="240" y="585" font-size="18" fill="#047857">IP: 200.200.200.5</text>
+
+  <!-- SMTP Client (FIXED SPACING) -->
+  <rect x="100" y="240" width="260" height="190" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="100" y="240" width="260" height="14" fill="#3B82F6" rx="10"/>
+
+  <text x="230" y="305" font-size="24" font-weight="700" fill="#0F172A" text-anchor="middle">
+    SMTP Client
+  </text>
+  <text x="230" y="345" font-size="17" fill="#475569" text-anchor="middle">
+    (Email Protocol)
+  </text>
+
+  <!-- DNS Client -->
+  <rect x="580" y="250" width="240" height="170" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="580" y="250" width="240" height="12" fill="#10B981" rx="8"/>
+  <text x="700" y="325" font-size="24" font-weight="700" fill="#0F172A" text-anchor="middle">DNS Client</text>
+  <text x="700" y="360" font-size="17" fill="#64748B" text-anchor="middle">(Local Resolver)</text>
+
+  <!-- DNS Server -->
+  <rect x="1060" y="250" width="240" height="170" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="1060" y="250" width="240" height="12" fill="#F59E0B" rx="8"/>
+  <g transform="translate(1180, 290)">
+    <rect x="-18" y="-16" width="36" height="32" rx="3" fill="none" stroke="#0F172A" stroke-width="3"/>
+    <line x1="-18" y1="0" x2="18" y2="0" stroke="#0F172A" stroke-width="3"/>
+  </g>
+  <text x="1180" y="345" font-size="22" font-weight="700" fill="#0F172A" text-anchor="middle">DNS Server</text>
+  <text x="1180" y="375" font-size="16" fill="#64748B" text-anchor="middle">(External Internet)</text>
+
+  <!-- Transport -->
+  <rect x="100" y="700" width="240" height="90" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-width="3"/>
+  <text x="220" y="745" font-size="22" font-weight="700" fill="#0F172A" text-anchor="middle">Transport Layer</text>
+  <text x="220" y="770" font-size="16" fill="#64748B" text-anchor="middle">(TCP)</text>
+
+</svg>
