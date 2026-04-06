@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" style="background-color: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#0284C7"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#10B981"/>
+    </marker>
+  </defs>
+
+  <text x="550" y="50" font-size="28" font-weight="bold" fill="#0F172A" text-anchor="middle">Single-Layer vs. Protocol Layering</text>
+
+  <rect x="50" y="100" width="450" height="350" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="275" y="140" font-size="20" font-weight="bold" fill="#334155" text-anchor="middle">Simple Communication</text>
+  <text x="275" y="160" font-size="14" fill="#64748B" text-anchor="middle">(Single-Layer Protocol)</text>
+
+  <rect x="80" y="220" width="100" height="120" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="3" filter="url(#shadow)"/>
+  <text x="130" y="285" font-size="18" font-weight="bold" fill="#0F172A" text-anchor="middle">Host A</text>
+
+  <rect x="370" y="220" width="100" height="120" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="3" filter="url(#shadow)"/>
+  <text x="420" y="285" font-size="18" font-weight="bold" fill="#0F172A" text-anchor="middle">Host B</text>
+
+  <rect x="180" y="260" width="190" height="40" fill="#E2E8F0" stroke="#64748B" stroke-width="2"/>
+  <text x="275" y="285" font-size="14" font-weight="bold" fill="#334155" text-anchor="middle">One Massive Protocol</text>
+  
+  <text x="275" y="335" font-size="12" fill="#475569" text-anchor="middle">Handles app, routing, and</text>
+  <text x="275" y="350" font-size="12" fill="#475569" text-anchor="middle">physical signals all at once.</text>
+
+
+  <rect x="550" y="100" width="500" height="350" rx="16" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="800" y="140" font-size="20" font-weight="bold" fill="#334155" text-anchor="middle">Complex Communication</text>
+  <text x="800" y="160" font-size="14" fill="#64748B" text-anchor="middle">(Protocol Layering)</text>
+
+  <text x="630" y="195" font-size="16" font-weight="bold" fill="#0F172A" text-anchor="middle">Host A</text>
+  <rect x="570" y="210" width="120" height="40" rx="4" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="630" y="235" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Layer 3 (App)</text>
+
+  <rect x="570" y="280" width="120" height="40" rx="4" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="630" y="305" font-size="14" font-weight="bold" fill="#047857" text-anchor="middle">Layer 2 (Net)</text>
+
+  <rect x="570" y="350" width="120" height="40" rx="4" fill="#F3F4F6" stroke="#6B7280" stroke-width="2" filter="url(#shadow)"/>
+  <text x="630" y="375" font-size="14" font-weight="bold" fill="#374151" text-anchor="middle">Layer 1 (Phys)</text>
+
+  <text x="970" y="195" font-size="16" font-weight="bold" fill="#0F172A" text-anchor="middle">Host B</text>
+  <rect x="910" y="210" width="120" height="40" rx="4" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="235" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Layer 3 (App)</text>
+
+  <rect x="910" y="280" width="120" height="40" rx="4" fill="#D1FAE5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="305" font-size="14" font-weight="bold" fill="#047857" text-anchor="middle">Layer 2 (Net)</text>
+
+  <rect x="910" y="350" width="120" height="40" rx="4" fill="#F3F4F6" stroke="#6B7280" stroke-width="2" filter="url(#shadow)"/>
+  <text x="970" y="375" font-size="14" font-weight="bold" fill="#374151" text-anchor="middle">Layer 1 (Phys)</text>
+
+  <path d="M 690 230 L 910 230" fill="none" stroke="#3B82F6" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow-blue)"/>
+  <text x="800" y="220" font-size="12" fill="#2563EB" text-anchor="middle">Logical App Protocol</text>
+
+  <path d="M 690 300 L 910 300" fill="none" stroke="#10B981" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#arrow-green)"/>
+  <text x="800" y="290" font-size="12" fill="#059669" text-anchor="middle">Logical Network Protocol</text>
+
+  <path d="M 690 370 L 910 370" fill="none" stroke="#374151" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="800" y="395" font-size="12" font-weight="bold" fill="#374151" text-anchor="middle">Actual Physical Transfer</text>
+
+  <path d="M 610 250 L 610 280" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 610 320 L 610 350" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <path d="M 990 350 L 990 320" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 990 280 L 990 250" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+</svg>
