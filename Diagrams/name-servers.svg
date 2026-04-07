@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" style="background-color: #FFFFFF; font-family: 'Times New Roman', Times, serif;">
+  <defs>
+    <g id="pc">
+      <rect x="-24" y="-20" width="48" height="36" rx="3" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+      <rect x="-18" y="-14" width="36" height="24" rx="1" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1"/>
+      <rect x="-6" y="16" width="12" height="8" fill="#64748B" stroke="#334155" stroke-width="1"/>
+      <rect x="-30" y="24" width="60" height="10" rx="2" fill="#F1F5F9" stroke="#334155" stroke-width="2"/>
+      <path d="M 35 29 C 35 26, 43 26, 43 29 C 43 32, 35 32, 35 29 Z" fill="#F1F5F9" stroke="#334155" stroke-width="1.5"/>
+      <path d="M 30 29 C 32 29, 33 24, 35 29" fill="none" stroke="#334155" stroke-width="1"/>
+    </g>
+  </defs>
+
+  <text x="500" y="70" font-size="36" font-weight="normal" fill="#000000" text-anchor="middle">Hierarchy of name servers</text>
+
+  <line x1="500" y1="180" x2="150" y2="350" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="500" y1="180" x2="350" y2="350" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="500" y1="180" x2="650" y2="350" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="500" y1="180" x2="850" y2="350" stroke="#1E293B" stroke-width="2.5"/>
+
+  <line x1="350" y1="360" x2="250" y2="530" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="350" y1="360" x2="450" y2="530" stroke="#1E293B" stroke-width="2.5"/>
+
+  <line x1="650" y1="360" x2="550" y2="530" stroke="#1E293B" stroke-width="2.5"/>
+  <line x1="650" y1="360" x2="750" y2="530" stroke="#1E293B" stroke-width="2.5"/>
+
+
+  <text x="500" y="145" font-size="20" fill="#000000" text-anchor="middle">Root server</text>
+  <use href="#pc" x="500" y="170"/>
+
+  <use href="#pc" x="150" y="340"/>
+  <text x="150" y="395" font-size="20" fill="#000000" text-anchor="middle">arpa server</text>
+
+  <use href="#pc" x="350" y="340"/>
+  <text x="350" y="395" font-size="20" fill="#000000" text-anchor="middle">edu server</text>
+
+  <use href="#pc" x="650" y="340"/>
+  <text x="650" y="395" font-size="20" fill="#000000" text-anchor="middle">com server</text>
+
+  <use href="#pc" x="850" y="340"/>
+  <text x="850" y="395" font-size="20" fill="#000000" text-anchor="middle">us server</text>
+
+  <text x="250" y="355" font-size="36" font-weight="bold" letter-spacing="4" fill="#000000" text-anchor="middle">...</text>
+  <text x="500" y="355" font-size="36" font-weight="bold" letter-spacing="4" fill="#000000" text-anchor="middle">...</text>
+  <text x="750" y="355" font-size="36" font-weight="bold" letter-spacing="4" fill="#000000" text-anchor="middle">...</text>
+
+  <use href="#pc" x="250" y="520"/>
+  <text x="250" y="575" font-size="20" fill="#000000" text-anchor="middle">fhda.edu</text>
+
+  <use href="#pc" x="450" y="520"/>
+  <text x="450" y="575" font-size="20" fill="#000000" text-anchor="middle">bk.edu</text>
+  
+  <text x="350" y="535" font-size="36" font-weight="bold" letter-spacing="4" fill="#000000" text-anchor="middle">...</text>
+
+  <use href="#pc" x="550" y="520"/>
+  <text x="550" y="575" font-size="20" fill="#000000" text-anchor="middle">mcgraw.com</text>
+
+  <use href="#pc" x="750" y="520"/>
+  <text x="750" y="575" font-size="20" fill="#000000" text-anchor="middle">irwin.com</text>
+
+  <text x="650" y="535" font-size="36" font-weight="bold" letter-spacing="4" fill="#000000" text-anchor="middle">...</text>
+
+</svg>
