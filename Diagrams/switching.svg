@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" style="background-color: #fdfdfd; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <g id="sketchy-switch">
+      <path d="M-14,-16 Q0,-15 16,-14 Q15,0 14,16 Q0,15 -16,14 Q-15,0 -14,-16 Z" fill="#f1f2f6" stroke="#57606f" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M-16,-14 Q0,-17 14,-15 Q17,0 15,14 Q0,17 -14,15 Q-17,0 -16,-14 Z" fill="none" stroke="#747d8c" stroke-width="1"/>
+    </g>
+    
+    <g id="packet">
+      <path d="M -11,-7 Q 0,-8 11,-6 Q 12,0 10,7 Q 0,8 -10,6 Q -12,0 -11,-7 Z" fill="#70a1ff" stroke="#1e90ff" stroke-width="1.5"/>
+      <line x1="-5" y1="-2" x2="5" y2="0" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <text x="500" y="45" font-size="28" font-weight="bold" fill="#2f3542" text-anchor="middle">SWITCHING TECHNIQUES</text>
+
+  <path d="M 52,82 Q 265,78 478,82 Q 482,205 478,328 Q 265,332 52,328 Q 48,205 52,82 Z" fill="#ffffff"/>
+  <path d="M 50,80 Q 265,75 480,80 Q 485,205 480,330 Q 265,335 50,330 Q 45,205 50,80 Z" fill="none" stroke="#a4b0be" stroke-width="2"/>
+  <path d="M 53,83 Q 265,85 477,83 Q 475,205 477,327 Q 265,325 53,327 Q 55,205 53,83 Z" fill="none" stroke="#ced6e0" stroke-width="1.5"/>
+
+  <text x="265" y="115" font-size="20" font-weight="bold" fill="#2f3542" text-anchor="middle">Circuit-Switched</text>
+  <text x="265" y="135" font-size="14" fill="#57606f" text-anchor="middle">Dedicated, reserved physical path.</text>
+
+  <use href="#sketchy-switch" x="150" y="180"/>
+  <use href="#sketchy-switch" x="250" y="180"/>
+  <use href="#sketchy-switch" x="350" y="180"/>
+  <use href="#sketchy-switch" x="150" y="260"/>
+  <use href="#sketchy-switch" x="250" y="260"/>
+  <use href="#sketchy-switch" x="350" y="260"/>
+
+  <path d="M 80,180 Q 115,176 150,182 Q 200,225 250,258 Q 300,263 350,258 Q 385,262 420,260" fill="none" stroke="#ff4757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 80,182 Q 115,180 150,178 Q 200,215 250,262 Q 300,255 350,262 Q 385,258 420,258" fill="none" stroke="#ff6b81" stroke-width="2" stroke-linecap="round"/>
+
+  <ellipse cx="80" cy="180" rx="9" ry="11" fill="#2f3542"/>
+  <ellipse cx="80" cy="180" rx="11" ry="9" fill="none" stroke="#2f3542" stroke-width="1.5"/>
+  <ellipse cx="420" cy="260" rx="10" ry="8" fill="#2f3542"/>
+  <ellipse cx="420" cy="260" rx="8" ry="10" fill="none" stroke="#2f3542" stroke-width="1.5"/>
+
+  <path d="M 522,82 Q 735,78 948,82 Q 952,205 948,328 Q 735,332 522,328 Q 518,205 522,82 Z" fill="#ffffff"/>
+  <path d="M 520,80 Q 735,75 950,80 Q 955,205 950,330 Q 735,335 520,330 Q 515,205 520,80 Z" fill="none" stroke="#a4b0be" stroke-width="2"/>
+  <path d="M 523,83 Q 735,85 947,83 Q 945,205 947,327 Q 735,325 523,327 Q 525,205 523,83 Z" fill="none" stroke="#ced6e0" stroke-width="1.5"/>
+
+  <text x="735" y="115" font-size="20" font-weight="bold" fill="#2f3542" text-anchor="middle">Packet-Switched</text>
+  <text x="735" y="135" font-size="14" fill="#57606f" text-anchor="middle">Data is chopped into blocks. Paths vary.</text>
+
+  <path d="M 550,220 Q 585,190 620,180" fill="none" stroke="#ced6e0" stroke-width="2" stroke-dasharray="8 4"/>
+  <path d="M 550,220 Q 585,250 620,260" fill="none" stroke="#ced6e0" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M 620,180 Q 670,175 720,180" fill="none" stroke="#ced6e0" stroke-width="2"/>
+  <path d="M 620,260 Q 670,265 720,260" fill="none" stroke="#ced6e0" stroke-width="2"/>
+  <path d="M 720,180 Q 770,215 820,260" fill="none" stroke="#ced6e0" stroke-width="2"/>
+  <path d="M 720,260 Q 770,265 820,260" fill="none" stroke="#ced6e0" stroke-width="2"/>
+  <path d="M 720,180 Q 770,175 820,180" fill="none" stroke="#ced6e0" stroke-width="2"/>
+  <path d="M 820,180 Q 855,190 890,220" fill="none" stroke="#ced6e0" stroke-width="2"/>
+  <path d="M 820,260 Q 855,250 890,220" fill="none" stroke="#ced6e0" stroke-width="2"/>
+  <path d="M 620,180 Q 670,220 720,260" fill="none" stroke="#ced6e0" stroke-width="2" stroke-dasharray="10 5"/>
+
+  <use href="#sketchy-switch" x="620" y="180"/>
+  <use href="#sketchy-switch" x="720" y="180"/>
+  <use href="#sketchy-switch" x="820" y="180"/>
+  <use href="#sketchy-switch" x="620" y="260"/>
+  <use href="#sketchy-switch" x="720" y="260"/>
+  <use href="#sketchy-switch" x="820" y="260"/>
+
+  <use href="#packet" x="585" y="195" transform="rotate(-15 585 195)"/>
+  <use href="#packet" x="600" y="245" transform="rotate(10 600 245)"/>
+  <use href="#packet" x="670" y="176" transform="rotate(-5 670 176)"/>
+  <use href="#packet" x="685" y="220" transform="rotate(35 685 220)"/>
+  <use href="#packet" x="670" y="264" transform="rotate(8 670 264)"/>
+  <use href="#packet" x="770" y="220" transform="rotate(-25 770 220)"/>
+  <use href="#packet" x="780" y="177" transform="rotate(5 780 177)"/>
+  <use href="#packet" x="860" y="200" transform="rotate(-20 860 200)"/>
+  <use href="#packet" x="850" y="240" transform="rotate(15 850 240)"/>
+
+  <ellipse cx="550" cy="220" rx="8" ry="10" fill="#2f3542"/>
+  <ellipse cx="550" cy="220" rx="10" ry="8" fill="none" stroke="#2f3542" stroke-width="1.5"/>
+  <ellipse cx="890" cy="220" rx="11" ry="9" fill="#2f3542"/>
+  <ellipse cx="890" cy="220" rx="9" ry="11" fill="none" stroke="#2f3542" stroke-width="1.5"/>
+
+</svg>
