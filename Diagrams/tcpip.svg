@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 560" width="100%" height="100%">
+  <defs>
+    <style>
+      .handdrawn {
+        font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;
+        fill: #2d3436;
+      }
+      .main-title { font-size: 28px; font-weight: bold; text-decoration: underline; }
+      .layer-title { font-size: 20px; font-weight: bold; }
+      .protocols { font-size: 14px; fill: #636e72; }
+      .pdu-text { font-size: 16px; font-weight: bold; fill: #d63031; }
+      .pdu-label { font-size: 14px; fill: #636e72; font-style: italic; }
+      
+      /* Application Layer */
+      .fill-app { fill: #ffeaa7; }
+      .stroke-app { stroke: #fdcb6e; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* Transport Layer */
+      .fill-trans { fill: #81ecec; }
+      .stroke-trans { stroke: #00cec9; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* Network Layer */
+      .fill-net { fill: #a29bfe; }
+      .stroke-net { stroke: #6c5ce7; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* Data Link Layer */
+      .fill-datalink { fill: #fab1a0; }
+      .stroke-datalink { stroke: #e17055; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Physical Layer */
+      .fill-phys { fill: #55efc4; }
+      .stroke-phys { stroke: #00b894; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* Arrow styles */
+      .arrow { stroke: #2d3436; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <text x="250" y="40" class="handdrawn main-title" text-anchor="middle">5-Layer TCP/IP Model</text>
+  <text x="560" y="40" class="handdrawn pdu-label" text-anchor="middle">Protocol Data Unit (PDU)</text>
+
+  <path d="M 100,70 L 400,72 L 398,130 L 102,128 Z" class="fill-app"/>
+  <path d="M 98,71 Q 250,68 402,70 Q 401,100 399,132 Q 250,130 101,129 Q 99,100 98,71 M 102,69 Q 250,72 398,71 Q 400,100 397,128 Q 250,127 101,131 Q 101,100 102,69" class="stroke-app"/>
+  
+  <text x="250" y="95" class="handdrawn layer-title" text-anchor="middle">Application Layer</text>
+  <text x="250" y="115" class="handdrawn protocols" text-anchor="middle">HTTP, FTP, DNS, SMTP</text>
+
+  <path d="M 420,100 Q 450,95 480,100 L 470,90 M 480,100 L 470,110" class="arrow"/>
+  <text x="500" y="105" class="handdrawn pdu-text">Data</text>
+
+  <path d="M 102,150 L 398,148 L 400,210 L 100,212 Z" class="fill-trans"/>
+  <path d="M 100,149 Q 250,152 400,147 Q 402,180 398,211 Q 250,213 102,210 Q 98,180 100,149 M 104,151 Q 250,148 396,151 Q 398,180 401,209 Q 250,211 98,213 Q 101,180 104,151" class="stroke-trans"/>
+  
+  <text x="250" y="175" class="handdrawn layer-title" text-anchor="middle">Transport Layer</text>
+  <text x="250" y="195" class="handdrawn protocols" text-anchor="middle">TCP, UDP</text>
+
+  <path d="M 420,180 Q 450,185 480,180 L 470,170 M 480,180 L 470,190" class="arrow"/>
+  <text x="500" y="185" class="handdrawn pdu-text">Segment / Datagram</text>
+
+  <path d="M 98,230 L 402,232 L 398,290 L 102,288 Z" class="fill-net"/>
+  <path d="M 100,231 Q 250,228 398,230 Q 401,260 399,292 Q 250,290 101,289 Q 99,260 100,231 M 96,229 Q 250,232 402,231 Q 400,260 397,288 Q 250,287 101,291 Q 101,260 96,229" class="stroke-net"/>
+  
+  <text x="250" y="255" class="handdrawn layer-title" text-anchor="middle">Network Layer</text>
+  <text x="250" y="275" class="handdrawn protocols" text-anchor="middle">IPv4, IPv6, ICMP</text>
+
+  <path d="M 420,260 Q 450,255 480,260 L 470,250 M 480,260 L 470,270" class="arrow"/>
+  <text x="500" y="265" class="handdrawn pdu-text">Packet</text>
+
+  <path d="M 100,310 L 400,308 L 398,370 L 102,372 Z" class="fill-datalink"/>
+  <path d="M 102,309 Q 250,312 398,307 Q 402,340 398,371 Q 250,373 102,370 Q 98,340 102,309 M 98,311 Q 250,308 402,311 Q 398,340 401,369 Q 250,371 98,373 Q 101,340 98,311" class="stroke-datalink"/>
+  
+  <text x="250" y="335" class="handdrawn layer-title" text-anchor="middle">Data Link Layer</text>
+  <text x="250" y="355" class="handdrawn protocols" text-anchor="middle">Ethernet, MAC, Switches, ARP</text>
+
+  <path d="M 420,340 Q 450,345 480,340 L 470,330 M 480,340 L 470,350" class="arrow"/>
+  <text x="500" y="345" class="handdrawn pdu-text">Frame</text>
+
+  <path d="M 98,390 L 402,392 L 398,450 L 102,448 Z" class="fill-phys"/>
+  <path d="M 100,391 Q 250,388 398,390 Q 401,420 399,452 Q 250,450 101,449 Q 99,420 100,391 M 96,389 Q 250,392 402,391 Q 400,420 397,448 Q 250,447 101,451 Q 101,420 96,389" class="stroke-phys"/>
+  
+  <text x="250" y="415" class="handdrawn layer-title" text-anchor="middle">Physical Layer</text>
+  <text x="250" y="435" class="handdrawn protocols" text-anchor="middle">Cables, Radio Signals, Hubs</text>
+
+  <path d="M 420,420 Q 450,415 480,420 L 470,410 M 480,420 L 470,430" class="arrow"/>
+  <text x="500" y="425" class="handdrawn pdu-text">Bits</text>
+
+  <path d="M 80,100 Q 60,260 80,420" stroke="#b2bec3" stroke-width="2" stroke-dasharray="8,8" fill="none"/>
+</svg>

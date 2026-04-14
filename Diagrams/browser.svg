@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" style="background-color: #FAFAFA; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <filter id="heavy-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.2"/>
+    </filter>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,1 L8,5 L0,9 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="60" font-size="28" font-weight="bold" fill="#0F172A" text-anchor="middle">Browser Architecture</text>
+
+  <rect x="420" y="90" width="160" height="20" rx="2" fill="#E2E8F0" stroke="#64748B" stroke-width="2"/>
+  <path d="M 430 90 L 440 80 L 580 80 L 570 90 Z" fill="#CBD5E1" stroke="#64748B" stroke-width="2"/>
+  <rect x="430" y="95" width="10" height="10" fill="#94A3B8"/><rect x="445" y="95" width="10" height="10" fill="#94A3B8"/>
+  <rect x="460" y="95" width="10" height="10" fill="#94A3B8"/><rect x="475" y="95" width="60" height="10" fill="#94A3B8"/>
+  <rect x="540" y="95" width="10" height="10" fill="#94A3B8"/><rect x="555" y="95" width="10" height="10" fill="#94A3B8"/>
+  <ellipse cx="610" cy="100" rx="8" ry="12" fill="#E2E8F0" stroke="#64748B" stroke-width="2"/>
+  <path d="M 580 100 Q 595 80 610 88" fill="none" stroke="#64748B" stroke-width="2"/>
+
+  <line x1="500" y1="110" x2="500" y2="150" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="200" y="160" width="460" height="240" rx="8" fill="#FFFFFF" stroke="#334155" stroke-width="3" filter="url(#shadow)"/>
+  <text x="215" y="185" font-size="16" font-weight="bold" fill="#64748B">Browser</text>
+
+  <rect x="220" y="210" width="310" height="40" rx="4" fill="#F1F5F9" stroke="#475569" stroke-width="2"/>
+  <text x="375" y="235" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Controller</text>
+
+  <rect x="220" y="300" width="330" height="70" rx="4" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+  
+  <rect x="230" y="315" width="60" height="40" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="2" filter="url(#heavy-shadow)"/>
+  <text x="260" y="340" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">HTTP</text>
+  
+  <rect x="300" y="315" width="60" height="40" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="2" filter="url(#heavy-shadow)"/>
+  <text x="330" y="340" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">FTP</text>
+  
+  <rect x="370" y="315" width="70" height="40" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="2" filter="url(#heavy-shadow)"/>
+  <text x="405" y="340" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">TELNET</text>
+  
+  <rect x="450" y="315" width="60" height="40" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="2" filter="url(#heavy-shadow)"/>
+  <text x="480" y="340" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">SMTP</text>
+
+  <text x="535" y="345" font-size="24" font-weight="bold" fill="#475569" text-anchor="middle">...</text>
+
+  <line x1="260" y1="250" x2="260" y2="315" stroke="#475569" stroke-width="2"/>
+  <line x1="330" y1="250" x2="330" y2="315" stroke="#475569" stroke-width="2"/>
+  <line x1="405" y1="250" x2="405" y2="315" stroke="#475569" stroke-width="2"/>
+  <line x1="480" y1="250" x2="480" y2="315" stroke="#475569" stroke-width="2"/>
+  <line x1="260" y1="270" x2="480" y2="270" stroke="#475569" stroke-width="2"/> <rect x="550" y="180" width="90" height="190" rx="4" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+  <text x="595" y="390" font-size="14" fill="#64748B" text-anchor="middle">Interpreters</text>
+
+  <rect x="560" y="195" width="70" height="40" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="2" filter="url(#heavy-shadow)"/>
+  <text x="595" y="220" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">HTML</text>
+
+  <rect x="560" y="250" width="70" height="40" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="2" filter="url(#heavy-shadow)"/>
+  <text x="595" y="275" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">JavaScript</text>
+
+  <rect x="560" y="305" width="70" height="40" rx="4" fill="#E2E8F0" stroke="#475569" stroke-width="2" filter="url(#heavy-shadow)"/>
+  <text x="595" y="330" font-size="14" font-weight="bold" fill="#1E293B" text-anchor="middle">Java</text>
+
+  <line x1="530" y1="230" x2="550" y2="215" stroke="#475569" stroke-width="2"/>
+  <line x1="530" y1="230" x2="550" y2="270" stroke="#475569" stroke-width="2"/>
+  <line x1="530" y1="230" x2="550" y2="325" stroke="#475569" stroke-width="2"/>
+
+  <line x1="660" y1="280" x2="710" y2="280" stroke="#334155" stroke-width="4" marker-end="url(#arrow)"/>
+  
+  <rect x="730" y="240" width="80" height="60" rx="4" fill="#F1F5F9" stroke="#334155" stroke-width="3"/>
+  <rect x="740" y="250" width="60" height="40" fill="#94A3B8" stroke="none"/>
+  <path d="M 740 250 L 760 250 C 750 270, 740 270, 740 290 Z" fill="#CBD5E1" opacity="0.6"/>
+  <rect x="760" y="300" width="20" height="15" fill="#64748B" stroke="#334155" stroke-width="2"/>
+  <line x1="740" y1="315" x2="800" y2="315" stroke="#334155" stroke-width="4"/>
+
+
+  <line x1="100" y1="460" x2="900" y2="460" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="500" y="500" font-size="28" font-weight="bold" fill="#0F172A" text-anchor="middle">Uniform Resource Locator (URL)</text>
+
+  <g transform="translate(180, 540)">
+    <rect x="0" y="0" width="140" height="60" fill="#E2E8F0" stroke="#334155" stroke-width="3" filter="url(#heavy-shadow)"/>
+    <text x="70" y="36" font-size="20" fill="#1E293B" text-anchor="middle">Protocol</text>
+    
+    <text x="165" y="40" font-size="32" font-weight="bold" fill="#0F172A" text-anchor="middle">://</text>
+
+    <rect x="190" y="0" width="140" height="60" fill="#E2E8F0" stroke="#334155" stroke-width="3" filter="url(#heavy-shadow)"/>
+    <text x="260" y="36" font-size="20" fill="#1E293B" text-anchor="middle">Host</text>
+
+    <text x="355" y="38" font-size="32" font-weight="bold" fill="#0F172A" text-anchor="middle">:</text>
+
+    <rect x="380" y="0" width="140" height="60" fill="#E2E8F0" stroke="#334155" stroke-width="3" filter="url(#heavy-shadow)"/>
+    <text x="450" y="36" font-size="20" fill="#1E293B" text-anchor="middle">Port</text>
+
+    <text x="545" y="40" font-size="32" font-weight="bold" fill="#0F172A" text-anchor="middle">/</text>
+
+    <rect x="570" y="0" width="140" height="60" fill="#E2E8F0" stroke="#334155" stroke-width="3" filter="url(#heavy-shadow)"/>
+    <text x="640" y="36" font-size="20" fill="#1E293B" text-anchor="middle">Path</text>
+  </g>
+
+</svg>

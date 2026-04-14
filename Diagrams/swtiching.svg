@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" style="background-color: #FAFAFA; font-family: -apple-system, sans-serif;">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.1"/></filter>
+    <g id="switch"><rect x="-15" y="-15" width="30" height="30" rx="4" fill="#94A3B8" stroke="#475569" stroke-width="2"/></g>
+  </defs>
+
+  <text x="500" y="40" font-size="24" font-weight="bold" fill="#0F172A" text-anchor="middle">SWITCHING TECHNIQUES</text>
+
+  <rect x="50" y="80" width="430" height="250" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="265" y="110" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">Circuit-Switched</text>
+  <text x="265" y="130" font-size="12" fill="#64748B" text-anchor="middle">Dedicated, reserved physical path.</text>
+  
+  <use href="#switch" x="150" y="180"/><use href="#switch" x="250" y="180"/><use href="#switch" x="350" y="180"/>
+  <use href="#switch" x="150" y="260"/><use href="#switch" x="250" y="260"/><use href="#switch" x="350" y="260"/>
+  <path d="M 80 180 L 150 180 L 250 260 L 350 260 L 420 260" fill="none" stroke="#EF4444" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="80" cy="180" r="10" fill="#334155"/><circle cx="420" cy="260" r="10" fill="#334155"/>
+
+
+  <rect x="520" y="80" width="430" height="250" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="735" y="110" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">Packet-Switched</text>
+  <text x="735" y="130" font-size="12" fill="#64748B" text-anchor="middle">Data is chopped into blocks. Paths vary.</text>
+
+  <use href="#switch" x="620" y="180"/><use href="#switch" x="720" y="180"/><use href="#switch" x="820" y="180"/>
+  <use href="#switch" x="620" y="260"/><use href="#switch" x="720" y="260"/><use href="#switch" x="820" y="260"/>
+  
+  <line x1="620" y1="180" x2="720" y2="180" stroke="#CBD5E1" stroke-width="2"/>
+  <line x1="720" y1="180" x2="820" y2="260" stroke="#CBD5E1" stroke-width="2"/>
+  <line x1="620" y1="260" x2="720" y2="260" stroke="#CBD5E1" stroke-width="2"/>
+  
+  <circle cx="550" cy="220" r="10" fill="#334155"/><circle cx="890" cy="220" r="10" fill="#334155"/>
+  
+  <rect x="580" y="195" width="20" height="15" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1"/>
+  <rect x="680" y="172" width="20" height="15" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1"/>
+  <rect x="680" y="252" width="20" height="15" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1"/>
+  <rect x="760" y="210" width="20" height="15" fill="#3B82F6" stroke="#1D4ED8" stroke-width="1"/>
+
+</svg>

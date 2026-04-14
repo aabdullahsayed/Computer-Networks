@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" style="background-color: #FAFAFA; font-family: -apple-system, sans-serif;">
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.1"/></filter>
+    <g id="node"><circle cx="0" cy="0" r="16" fill="#3B82F6" stroke="#1D4ED8" stroke-width="2" filter="url(#shadow)"/></g>
+    <g id="hub"><rect x="-20" y="-15" width="40" height="30" rx="4" fill="#10B981" stroke="#047857" stroke-width="2" filter="url(#shadow)"/></g>
+  </defs>
+
+  <text x="500" y="40" font-size="24" font-weight="bold" fill="#0F172A" text-anchor="middle">NETWORK TOPOLOGIES</text>
+
+  <rect x="50" y="80" width="400" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="250" y="110" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">1. Mesh Topology</text>
+  <line x1="180" y1="160" x2="320" y2="160" stroke="#94A3B8" stroke-width="2"/><line x1="180" y1="240" x2="320" y2="240" stroke="#94A3B8" stroke-width="2"/>
+  <line x1="180" y1="160" x2="180" y2="240" stroke="#94A3B8" stroke-width="2"/><line x1="320" y1="160" x2="320" y2="240" stroke="#94A3B8" stroke-width="2"/>
+  <line x1="180" y1="160" x2="320" y2="240" stroke="#94A3B8" stroke-width="2"/><line x1="180" y1="240" x2="320" y2="160" stroke="#94A3B8" stroke-width="2"/>
+  <use href="#node" x="180" y="160"/><use href="#node" x="320" y="160"/>
+  <use href="#node" x="180" y="240"/><use href="#node" x="320" y="240"/>
+
+  <rect x="550" y="80" width="400" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="750" y="110" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">2. Star Topology</text>
+  <line x1="750" y1="200" x2="680" y2="150" stroke="#94A3B8" stroke-width="2"/><line x1="750" y1="200" x2="820" y2="150" stroke="#94A3B8" stroke-width="2"/>
+  <line x1="750" y1="200" x2="680" y2="250" stroke="#94A3B8" stroke-width="2"/><line x1="750" y1="200" x2="820" y2="250" stroke="#94A3B8" stroke-width="2"/>
+  <use href="#hub" x="750" y="200"/>
+  <use href="#node" x="680" y="150"/><use href="#node" x="820" y="150"/>
+  <use href="#node" x="680" y="250"/><use href="#node" x="820" y="250"/>
+
+  <rect x="50" y="330" width="400" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="250" y="360" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">3. Bus Topology</text>
+  <line x1="120" y1="430" x2="380" y2="430" stroke="#475569" stroke-width="6"/>
+  <line x1="160" y1="430" x2="160" y2="480" stroke="#94A3B8" stroke-width="2"/><line x1="240" y1="430" x2="240" y2="480" stroke="#94A3B8" stroke-width="2"/>
+  <line x1="320" y1="430" x2="320" y2="480" stroke="#94A3B8" stroke-width="2"/>
+  <use href="#node" x="160" y="480"/><use href="#node" x="240" y="480"/><use href="#node" x="320" y="480"/>
+
+  <rect x="550" y="330" width="400" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="750" y="360" font-size="18" font-weight="bold" fill="#334155" text-anchor="middle">4. Ring Topology</text>
+  <circle cx="750" cy="440" r="50" fill="none" stroke="#94A3B8" stroke-width="2"/>
+  <use href="#node" x="750" y="390"/><use href="#node" x="800" y="440"/>
+  <use href="#node" x="750" y="490"/><use href="#node" x="700" y="440"/>
+</svg>
