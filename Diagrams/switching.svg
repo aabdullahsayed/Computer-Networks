@@ -1,78 +1,147 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" style="background-color: #fdfdfd; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 550" style="background-color: #fdfdfd; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
   <defs>
-    <g id="sketchy-switch">
-      <path d="M-14,-16 Q0,-15 16,-14 Q15,0 14,16 Q0,15 -16,14 Q-15,0 -14,-16 Z" fill="#f1f2f6" stroke="#57606f" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M-16,-14 Q0,-17 14,-15 Q17,0 15,14 Q0,17 -14,15 Q-17,0 -16,-14 Z" fill="none" stroke="#747d8c" stroke-width="1"/>
-    </g>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1600" height="800" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
     
-    <g id="packet">
-      <path d="M -11,-7 Q 0,-8 11,-6 Q 12,0 10,7 Q 0,8 -10,6 Q -12,0 -11,-7 Z" fill="#70a1ff" stroke="#1e90ff" stroke-width="1.5"/>
-      <line x1="-5" y1="-2" x2="5" y2="0" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#2d3436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+
+    <g id="sw">
+      <path d="M-15,-15 Q0,-17 15,-15 Q17,0 15,15 Q0,17 -15,15 Q-17,0 -15,-15 Z" fill="#f1f2f6" stroke="#57606f" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M-10,-5 L10,-5 M 5,-10 L10,-5 L5,0 M -5,5 L-10,10 L-5,15 M -10,10 L10,10" fill="none" stroke="#747d8c" stroke-width="1.5"/>
+    </g>
+
+    <g id="pkt">
+      <path d="M-12,-8 Q0,-9 12,-8 Q13,0 12,8 Q0,9 -12,8 Q-13,0 -12,-8 Z" fill="#74b9ff" stroke="#0984e3" stroke-width="1.5"/>
+    </g>
+    <g id="vc-pkt">
+      <path d="M-12,-8 Q0,-9 12,-8 Q13,0 12,8 Q0,9 -12,8 Q-13,0 -12,-8 Z" fill="#55efc4" stroke="#00b894" stroke-width="1.5"/>
+      <text x="0" y="3" font-size="9" font-weight="bold" fill="#2d3436" text-anchor="middle">VC</text>
     </g>
   </defs>
 
-  <text x="500" y="45" font-size="28" font-weight="bold" fill="#2f3542" text-anchor="middle">SWITCHING TECHNIQUES</text>
+  <text x="710" y="45" font-size="28" font-weight="bold" fill="#2d3436" text-anchor="middle">NETWORK LAYER: SWITCHING APPROACHES</text>
 
-  <path d="M 52,82 Q 265,78 478,82 Q 482,205 478,328 Q 265,332 52,328 Q 48,205 52,82 Z" fill="#ffffff"/>
-  <path d="M 50,80 Q 265,75 480,80 Q 485,205 480,330 Q 265,335 50,330 Q 45,205 50,80 Z" fill="none" stroke="#a4b0be" stroke-width="2"/>
-  <path d="M 53,83 Q 265,85 477,83 Q 475,205 477,327 Q 265,325 53,327 Q 55,205 53,83 Z" fill="none" stroke="#ced6e0" stroke-width="1.5"/>
+  <g transform="translate(20, 80)">
+    <g filter="url(#wobble)">
+      <rect x="0" y="0" width="440" height="440" rx="12" fill="#ffffff" stroke="#b2bec3" stroke-width="2"/>
+      <rect x="2" y="2" width="436" height="436" rx="12" fill="none" stroke="#dfe6e9" stroke-width="1.5"/>
+    </g>
+    
+    <text x="220" y="35" font-size="20" font-weight="bold" fill="#d63031" text-anchor="middle">Circuit Switching</text>
+    <text x="220" y="55" font-size="13" fill="#636e72" text-anchor="middle">Dedicated physical path, reserved resources.</text>
 
-  <text x="265" y="115" font-size="20" font-weight="bold" fill="#2f3542" text-anchor="middle">Circuit-Switched</text>
-  <text x="265" y="135" font-size="14" fill="#57606f" text-anchor="middle">Dedicated, reserved physical path.</text>
+    <g filter="url(#wobble)">
+      <path d="M50,220 L130,150 L215,150 L300,150 L380,220" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M50,220 L130,290 L215,290 L300,290 L380,220" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M130,150 L130,290 M215,150 L215,290 M300,150 L300,290" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M130,150 L215,290 M215,150 L300,290" fill="none" stroke="#dfe6e9" stroke-width="2"/>
 
-  <use href="#sketchy-switch" x="150" y="180"/>
-  <use href="#sketchy-switch" x="250" y="180"/>
-  <use href="#sketchy-switch" x="350" y="180"/>
-  <use href="#sketchy-switch" x="150" y="260"/>
-  <use href="#sketchy-switch" x="250" y="260"/>
-  <use href="#sketchy-switch" x="350" y="260"/>
+      <path d="M50,220 Q90,260 130,290 Q175,285 215,290 Q255,220 300,150 Q340,185 380,220" fill="none" stroke="#ff7675" stroke-width="6" stroke-linecap="round"/>
+      <path d="M50,220 Q90,260 130,290 Q175,285 215,290 Q255,220 300,150 Q340,185 380,220" fill="none" stroke="#d63031" stroke-width="2" stroke-dasharray="8 4"/>
 
-  <path d="M 80,180 Q 115,176 150,182 Q 200,225 250,258 Q 300,263 350,258 Q 385,262 420,260" fill="none" stroke="#ff4757" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 80,182 Q 115,180 150,178 Q 200,215 250,262 Q 300,255 350,262 Q 385,258 420,258" fill="none" stroke="#ff6b81" stroke-width="2" stroke-linecap="round"/>
+      <use href="#sw" x="130" y="150"/><use href="#sw" x="215" y="150"/><use href="#sw" x="300" y="150"/>
+      <use href="#sw" x="130" y="290"/><use href="#sw" x="215" y="290"/><use href="#sw" x="300" y="290"/>
+      
+      <circle cx="50" cy="220" r="8" fill="#2d3436"/><circle cx="380" cy="220" r="8" fill="#2d3436"/>
+    </g>
 
-  <ellipse cx="80" cy="180" rx="9" ry="11" fill="#2f3542"/>
-  <ellipse cx="80" cy="180" rx="11" ry="9" fill="none" stroke="#2f3542" stroke-width="1.5"/>
-  <ellipse cx="420" cy="260" rx="10" ry="8" fill="#2f3542"/>
-  <ellipse cx="420" cy="260" rx="8" ry="10" fill="none" stroke="#2f3542" stroke-width="1.5"/>
+    <text x="220" y="350" font-size="14" font-weight="bold" fill="#d63031" text-anchor="middle">3 Phases:</text>
+    <text x="220" y="370" font-size="13" fill="#2d3436" text-anchor="middle">1. Setup Circuit</text>
+    <text x="220" y="390" font-size="13" fill="#2d3436" text-anchor="middle">2. Transfer Data (Continuous)</text>
+    <text x="220" y="410" font-size="13" fill="#2d3436" text-anchor="middle">3. Teardown Circuit</text>
+  </g>
 
-  <path d="M 522,82 Q 735,78 948,82 Q 952,205 948,328 Q 735,332 522,328 Q 518,205 522,82 Z" fill="#ffffff"/>
-  <path d="M 520,80 Q 735,75 950,80 Q 955,205 950,330 Q 735,335 520,330 Q 515,205 520,80 Z" fill="none" stroke="#a4b0be" stroke-width="2"/>
-  <path d="M 523,83 Q 735,85 947,83 Q 945,205 947,327 Q 735,325 523,327 Q 525,205 523,83 Z" fill="none" stroke="#ced6e0" stroke-width="1.5"/>
+  <g transform="translate(490, 80)">
+    <g filter="url(#wobble)">
+      <rect x="0" y="0" width="440" height="440" rx="12" fill="#ffffff" stroke="#b2bec3" stroke-width="2"/>
+      <rect x="2" y="2" width="436" height="436" rx="12" fill="none" stroke="#dfe6e9" stroke-width="1.5"/>
+    </g>
+    
+    <text x="220" y="35" font-size="20" font-weight="bold" fill="#0984e3" text-anchor="middle">Packet: Datagram</text>
+    <text x="220" y="55" font-size="13" fill="#636e72" text-anchor="middle">Connectionless. Independent routing based on IP.</text>
 
-  <text x="735" y="115" font-size="20" font-weight="bold" fill="#2f3542" text-anchor="middle">Packet-Switched</text>
-  <text x="735" y="135" font-size="14" fill="#57606f" text-anchor="middle">Data is chopped into blocks. Paths vary.</text>
+    <g filter="url(#wobble)">
+      <path d="M50,220 L130,150 L215,150 L300,150 L380,220" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M50,220 L130,290 L215,290 L300,290 L380,220" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M130,150 L130,290 M215,150 L215,290 M300,150 L300,290" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M130,150 L215,290 M215,150 L300,290" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M130,290 L215,150 M215,290 L300,150" fill="none" stroke="#dfe6e9" stroke-width="2"/>
 
-  <path d="M 550,220 Q 585,190 620,180" fill="none" stroke="#ced6e0" stroke-width="2" stroke-dasharray="8 4"/>
-  <path d="M 550,220 Q 585,250 620,260" fill="none" stroke="#ced6e0" stroke-width="2" stroke-dasharray="6 4"/>
-  <path d="M 620,180 Q 670,175 720,180" fill="none" stroke="#ced6e0" stroke-width="2"/>
-  <path d="M 620,260 Q 670,265 720,260" fill="none" stroke="#ced6e0" stroke-width="2"/>
-  <path d="M 720,180 Q 770,215 820,260" fill="none" stroke="#ced6e0" stroke-width="2"/>
-  <path d="M 720,260 Q 770,265 820,260" fill="none" stroke="#ced6e0" stroke-width="2"/>
-  <path d="M 720,180 Q 770,175 820,180" fill="none" stroke="#ced6e0" stroke-width="2"/>
-  <path d="M 820,180 Q 855,190 890,220" fill="none" stroke="#ced6e0" stroke-width="2"/>
-  <path d="M 820,260 Q 855,250 890,220" fill="none" stroke="#ced6e0" stroke-width="2"/>
-  <path d="M 620,180 Q 670,220 720,260" fill="none" stroke="#ced6e0" stroke-width="2" stroke-dasharray="10 5"/>
+      <use href="#sw" x="130" y="150"/><use href="#sw" x="215" y="150"/><use href="#sw" x="300" y="150"/>
+      <use href="#sw" x="130" y="290"/><use href="#sw" x="215" y="290"/><use href="#sw" x="300" y="290"/>
+      
+      <circle cx="50" cy="220" r="8" fill="#2d3436"/><circle cx="380" cy="220" r="8" fill="#2d3436"/>
 
-  <use href="#sketchy-switch" x="620" y="180"/>
-  <use href="#sketchy-switch" x="720" y="180"/>
-  <use href="#sketchy-switch" x="820" y="180"/>
-  <use href="#sketchy-switch" x="620" y="260"/>
-  <use href="#sketchy-switch" x="720" y="260"/>
-  <use href="#sketchy-switch" x="820" y="260"/>
+      <use href="#pkt" x="90" y="185" transform="rotate(30 90 185)"/>
+      <text x="90" y="188" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+      
+      <use href="#pkt" x="172" y="150"/>
+      <text x="172" y="153" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+      
+      <use href="#pkt" x="175" y="220" transform="rotate(-50 175 220)"/>
+      <text x="175" y="223" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+      
+      <use href="#pkt" x="257" y="150"/>
+      <text x="257" y="153" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+      
+      <use href="#pkt" x="100" y="260" transform="rotate(-30 100 260)"/>
+      <text x="100" y="263" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+      
+      <use href="#pkt" x="257" y="290"/>
+      <text x="257" y="293" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+      
+      <use href="#pkt" x="340" y="185" transform="rotate(-30 340 185)"/>
+      <text x="340" y="188" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+    </g>
 
-  <use href="#packet" x="585" y="195" transform="rotate(-15 585 195)"/>
-  <use href="#packet" x="600" y="245" transform="rotate(10 600 245)"/>
-  <use href="#packet" x="670" y="176" transform="rotate(-5 670 176)"/>
-  <use href="#packet" x="685" y="220" transform="rotate(35 685 220)"/>
-  <use href="#packet" x="670" y="264" transform="rotate(8 670 264)"/>
-  <use href="#packet" x="770" y="220" transform="rotate(-25 770 220)"/>
-  <use href="#packet" x="780" y="177" transform="rotate(5 780 177)"/>
-  <use href="#packet" x="860" y="200" transform="rotate(-20 860 200)"/>
-  <use href="#packet" x="850" y="240" transform="rotate(15 850 240)"/>
+    <text x="220" y="350" font-size="14" font-weight="bold" fill="#0984e3" text-anchor="middle">Key Characteristics:</text>
+    <text x="220" y="370" font-size="13" fill="#2d3436" text-anchor="middle">• No setup phase required.</text>
+    <text x="220" y="390" font-size="13" fill="#2d3436" text-anchor="middle">• Packets route dynamically (Dest IP).</text>
+    <text x="220" y="410" font-size="13" fill="#2d3436" text-anchor="middle">• Packets may arrive out-of-order.</text>
+  </g>
 
-  <ellipse cx="550" cy="220" rx="8" ry="10" fill="#2f3542"/>
-  <ellipse cx="550" cy="220" rx="10" ry="8" fill="none" stroke="#2f3542" stroke-width="1.5"/>
-  <ellipse cx="890" cy="220" rx="11" ry="9" fill="#2f3542"/>
-  <ellipse cx="890" cy="220" rx="9" ry="11" fill="none" stroke="#2f3542" stroke-width="1.5"/>
+  <g transform="translate(960, 80)">
+    <g filter="url(#wobble)">
+      <rect x="0" y="0" width="440" height="440" rx="12" fill="#ffffff" stroke="#b2bec3" stroke-width="2"/>
+      <rect x="2" y="2" width="436" height="436" rx="12" fill="none" stroke="#dfe6e9" stroke-width="1.5"/>
+    </g>
+    
+    <text x="220" y="35" font-size="20" font-weight="bold" fill="#00b894" text-anchor="middle">Packet: Virtual Circuit</text>
+    <text x="220" y="55" font-size="13" fill="#636e72" text-anchor="middle">Connection-oriented. Logical path setup, shared bandwidth.</text>
+
+    <g filter="url(#wobble)">
+      <path d="M50,220 L130,150 L215,150 L300,150 L380,220" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M50,220 L130,290 L215,290 L300,290 L380,220" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M130,150 L130,290 M215,150 L215,290 M300,150 L300,290" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+      <path d="M130,150 L215,290 M215,150 L300,290" fill="none" stroke="#dfe6e9" stroke-width="2"/>
+
+      <path d="M50,220 L130,150 L215,290 L300,290 L380,220" fill="none" stroke="#00b894" stroke-width="3" stroke-dasharray="8 6"/>
+
+      <use href="#sw" x="130" y="150"/><use href="#sw" x="215" y="150"/><use href="#sw" x="300" y="150"/>
+      <use href="#sw" x="130" y="290"/><use href="#sw" x="215" y="290"/><use href="#sw" x="300" y="290"/>
+      
+      <circle cx="50" cy="220" r="8" fill="#2d3436"/><circle cx="380" cy="220" r="8" fill="#2d3436"/>
+
+      <use href="#vc-pkt" x="90" y="185" transform="rotate(30 90 185)"/>
+      <use href="#vc-pkt" x="175" y="220" transform="rotate(-50 175 220)"/>
+      <use href="#vc-pkt" x="257" y="290"/>
+      <use href="#vc-pkt" x="340" y="255" transform="rotate(-30 340 255)"/>
+    </g>
+
+    <g filter="url(#wobble)">
+      <rect x="240" y="160" width="100" height="40" rx="4" fill="#f1f2f6" stroke="#b2bec3" stroke-width="1.5"/>
+      <text x="290" y="175" font-size="10" font-weight="bold" fill="#2d3436" text-anchor="middle">VC Table</text>
+      <text x="290" y="190" font-size="10" fill="#636e72" text-anchor="middle">In: 12 → Out: 44</text>
+    </g>
+
+    <text x="220" y="350" font-size="14" font-weight="bold" fill="#00b894" text-anchor="middle">Key Characteristics:</text>
+    <text x="220" y="370" font-size="13" fill="#2d3436" text-anchor="middle">• VC setup phase creates a logical path.</text>
+    <text x="220" y="390" font-size="13" fill="#2d3436" text-anchor="middle">• Packets carry VC ID, not Dest IP.</text>
+    <text x="220" y="410" font-size="13" fill="#2d3436" text-anchor="middle">• In-order delivery, shared resources.</text>
+  </g>
 
 </svg>
