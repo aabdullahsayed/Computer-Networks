@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" style="background-color: #FAFAFA; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1600" height="1200" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#2d3436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="600" y="50" font-size="36" font-weight="bold" fill="#0984e3" text-anchor="middle">Multiplexing and Demultiplexing</text>
+  <text x="600" y="85" font-size="18" fill="#2d3436" text-anchor="middle">Addressing mechanism allows multiplexing and demultiplexing by the transport layer</text>
+
+  <g filter="url(#wobble)">
+    <path d="M 450,490 L 550,490 L 700,320 L 780,320" fill="none" stroke="#dfe6e9" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 450,510 L 550,510 L 700,750 L 780,750" fill="none" stroke="#dfe6e9" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g filter="url(#wobble)" transform="translate(560, 420) rotate(-48)">
+    <rect x="0" y="0" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="0" y="0" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+    <text x="35" y="-5" font-size="14" fill="#2d3436" text-anchor="middle">Packet 1</text>
+  </g>
+  <g filter="url(#wobble)" transform="translate(500, 490) rotate(-48)">
+    <rect x="0" y="0" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="0" y="0" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+    <text x="35" y="-5" font-size="14" fill="#2d3436" text-anchor="middle">Packet 3</text>
+  </g>
+  
+  <g filter="url(#wobble)" transform="translate(580, 600) rotate(58)">
+    <rect x="0" y="0" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="0" y="0" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+    <text x="35" y="35" font-size="14" fill="#2d3436" text-anchor="middle" transform="rotate(180 35 35)">Packet 2</text>
+  </g>
+
+
+  <text x="300" y="160" font-size="16" fill="#2d3436" text-anchor="middle">Client</text>
+  
+  <text x="170" y="230" font-size="15" fill="#636e72" text-anchor="end">Application</text>
+  <text x="170" y="250" font-size="15" fill="#636e72" text-anchor="end">layer</text>
+  <g filter="url(#wobble)">
+    <rect x="180" y="190" width="230" height="100" fill="#ffffff" stroke="#636e72" stroke-width="3"/>
+    
+    <rect x="205" y="220" width="40" height="50" fill="#636e72" stroke="#2d3436" stroke-width="2"/>
+    <rect x="275" y="220" width="40" height="50" fill="#636e72" stroke="#2d3436" stroke-width="2"/>
+    <rect x="345" y="220" width="40" height="50" fill="#636e72" stroke="#2d3436" stroke-width="2"/>
+  </g>
+  <text x="225" y="210" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">P1</text>
+  <text x="295" y="210" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">P2</text>
+  <text x="365" y="210" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">P3</text>
+
+  <text x="170" y="325" font-size="15" fill="#636e72" text-anchor="end">Messages</text>
+  <g filter="url(#wobble)">
+    <rect x="205" y="310" width="35" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="270" y="310" width="35" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="335" y="310" width="35" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    
+    <line x1="225" y1="275" x2="225" y2="305" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="295" y1="275" x2="295" y2="305" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="365" y1="275" x2="365" y2="305" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  <text x="222.5" y="325" font-size="14" fill="#2d3436" text-anchor="middle">m1</text>
+  <text x="287.5" y="325" font-size="14" fill="#2d3436" text-anchor="middle">m2</text>
+  <text x="352.5" y="325" font-size="14" fill="#2d3436" text-anchor="middle">m3</text>
+
+  <text x="155" y="440" font-size="15" fill="#636e72" text-anchor="end">Transport</text>
+  <text x="155" y="460" font-size="15" fill="#636e72" text-anchor="end">layer</text>
+  <g filter="url(#wobble)">
+    <rect x="165" y="370" width="260" height="170" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    
+    <polygon points="190,370 400,370 380,410 210,410" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+    
+    <line x1="225" y1="335" x2="225" y2="365" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="295" y1="335" x2="295" y2="365" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="365" y1="335" x2="365" y2="365" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="295" y1="415" x2="295" y2="525" stroke="#2d3436" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="255" y="430" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="255" y="430" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+    
+    <rect x="255" y="460" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="255" y="460" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+    
+    <rect x="255" y="490" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="255" y="490" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+    
+    <line x1="425" y1="480" x2="450" y2="480" stroke="#b2bec3" stroke-width="6"/>
+    <line x1="425" y1="520" x2="450" y2="520" stroke="#b2bec3" stroke-width="6"/>
+  </g>
+  <text x="295" y="395" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Multiplexer</text>
+  <text x="245" y="445" font-size="14" fill="#2d3436" text-anchor="end">Packet 1</text>
+  <text x="245" y="475" font-size="14" fill="#2d3436" text-anchor="end">Packet 2</text>
+  <text x="245" y="505" font-size="14" fill="#2d3436" text-anchor="end">Packet 3</text>
+
+
+  <text x="910" y="70" font-size="16" fill="#2d3436" text-anchor="middle">Server</text>
+  
+  <text x="1050" y="130" font-size="15" fill="#636e72" text-anchor="start">Application</text>
+  <text x="1050" y="150" font-size="15" fill="#636e72" text-anchor="start">layer</text>
+  <g filter="url(#wobble)">
+    <rect x="790" y="90" width="240" height="100" fill="#ffffff" stroke="#636e72" stroke-width="3"/>
+    
+    <rect x="830" y="110" width="40" height="50" fill="#636e72" stroke="#2d3436" stroke-width="2"/>
+    <rect x="910" y="110" width="40" height="50" fill="#636e72" stroke="#2d3436" stroke-width="2"/>
+    
+    <line x1="850" y1="180" x2="850" y2="165" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="930" y1="180" x2="930" y2="165" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  <text x="850" y="105" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">P1</text>
+  <text x="930" y="105" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">P3</text>
+
+  <g filter="url(#wobble)">
+    <rect x="835" y="210" width="30" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="915" y="210" width="30" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    
+    <line x1="850" y1="260" x2="850" y2="235" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="930" y1="260" x2="930" y2="235" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  <text x="850" y="225" font-size="14" fill="#2d3436" text-anchor="middle">m1</text>
+  <text x="930" y="225" font-size="14" fill="#2d3436" text-anchor="middle">m3</text>
+
+  <text x="1050" y="300" font-size="15" fill="#636e72" text-anchor="start">Transport</text>
+  <text x="1050" y="320" font-size="15" fill="#636e72" text-anchor="start">layer</text>
+  <g filter="url(#wobble)">
+    <rect x="780" y="240" width="250" height="140" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    
+    <polygon points="810,240 970,240 990,280 790,280" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+    
+    <line x1="890" y1="360" x2="890" y2="285" stroke="#2d3436" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="880" y="310" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="880" y="310" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+    
+    <rect x="880" y="340" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="880" y="340" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+  </g>
+  <text x="890" y="265" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Demultiplexer</text>
+  <text x="870" y="325" font-size="14" fill="#2d3436" text-anchor="end">Packet 1</text>
+  <text x="870" y="355" font-size="14" fill="#2d3436" text-anchor="end">Packet 3</text>
+
+
+  <text x="910" y="470" font-size="16" fill="#2d3436" text-anchor="middle">Server</text>
+  
+  <text x="1050" y="520" font-size="15" fill="#636e72" text-anchor="start">Application</text>
+  <text x="1050" y="540" font-size="15" fill="#636e72" text-anchor="start">layer</text>
+  <g filter="url(#wobble)">
+    <rect x="790" y="490" width="240" height="100" fill="#ffffff" stroke="#636e72" stroke-width="3"/>
+    
+    <rect x="870" y="510" width="40" height="50" fill="#636e72" stroke="#2d3436" stroke-width="2"/>
+    
+    <line x1="890" y1="580" x2="890" y2="565" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  <text x="890" y="505" font-size="14" font-weight="bold" fill="#2d3436" text-anchor="middle">P2</text>
+
+  <text x="760" y="625" font-size="15" fill="#636e72" text-anchor="end">Message</text>
+  <g filter="url(#wobble)">
+    <rect x="875" y="610" width="30" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <line x1="890" y1="660" x2="890" y2="635" stroke="#2d3436" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  <text x="890" y="625" font-size="14" fill="#2d3436" text-anchor="middle">m2</text>
+
+  <text x="1050" y="700" font-size="15" fill="#636e72" text-anchor="start">Transport</text>
+  <text x="1050" y="720" font-size="15" fill="#636e72" text-anchor="start">layer</text>
+  <g filter="url(#wobble)">
+    <rect x="780" y="640" width="250" height="140" fill="#e2e8f0" stroke="#64748b" stroke-width="3"/>
+    
+    <polygon points="810,640 970,640 990,680 790,680" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+    
+    <line x1="890" y1="740" x2="890" y2="685" stroke="#2d3436" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="870" y="730" width="70" height="20" fill="#ffffff" stroke="#2d3436" stroke-width="1.5"/>
+    <rect x="870" y="730" width="15" height="20" fill="#b2bec3" stroke="#2d3436" stroke-width="1.5"/>
+  </g>
+  <text x="890" y="665" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Demultiplexer</text>
+  <text x="860" y="745" font-size="14" fill="#2d3436" text-anchor="end">Packet 2</text>
+
+
+  <g filter="url(#wobble)">
+    <rect x="80" y="650" width="160" height="80" rx="8" fill="#ffffff" stroke="#2d3436" stroke-width="2"/>
+  </g>
+  <text x="90" y="640" font-size="16" font-weight="bold" fill="#2d3436" text-anchor="start">Legend</text>
+  <text x="95" y="680" font-size="16" fill="#2d3436" text-anchor="start">mi: Message</text>
+  <text x="95" y="710" font-size="16" fill="#2d3436" text-anchor="start">Pi: Process</text>
+
+</svg>
