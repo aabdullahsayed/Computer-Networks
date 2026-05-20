@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 850" style="background-color: #FAFAFA; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1200" height="1000" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <text x="500" y="50" font-size="32" font-weight="bold" fill="#0f172a" text-anchor="middle">Header Comparison: TCP vs UDP</text>
+  <text x="500" y="80" font-size="16" fill="#64748b" text-anchor="middle">The structural difference between "Reliable Delivery" and "Best Effort Speed".</text>
+
+  <g filter="url(#wobble)">
+    <rect x="80" y="120" width="840" height="400" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8 4"/>
+  </g>
+  <text x="500" y="160" font-size="24" font-weight="bold" fill="#1d4ed8" text-anchor="middle">TCP Header (Minimum 20 Bytes)</text>
+  <text x="500" y="185" font-size="14" fill="#64748b" text-anchor="middle">Heavy, stateful, and packed with tracking information.</text>
+
+  <g filter="url(#wobble)">
+    <rect x="150" y="210" width="350" height="50" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="500" y="210" width="350" height="50" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    
+    <rect x="150" y="260" width="700" height="50" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+    
+    <rect x="150" y="310" width="700" height="50" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+    
+    <rect x="150" y="360" width="100" height="50" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="250" y="360" width="250" height="50" fill="#f1f5f9" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="500" y="360" width="350" height="50" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+    
+    <rect x="150" y="410" width="350" height="50" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="500" y="410" width="350" height="50" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+
+    <rect x="150" y="460" width="700" height="40" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4"/>
+  </g>
+
+  <text x="325" y="240" font-size="18" font-weight="bold" fill="#b91c1c" text-anchor="middle">Source Port (16 bits)</text>
+  <text x="675" y="240" font-size="18" font-weight="bold" fill="#b91c1c" text-anchor="middle">Destination Port (16 bits)</text>
+  
+  <text x="500" y="290" font-size="18" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Sequence Number (32 bits)</text>
+  <text x="500" y="340" font-size="18" font-weight="bold" fill="#1e3a8a" text-anchor="middle">Acknowledgment Number (32 bits)</text>
+  
+  <text x="200" y="390" font-size="14" fill="#334155" text-anchor="middle">Offset</text>
+  <text x="375" y="390" font-size="16" fill="#334155" text-anchor="middle">Flags (SYN, ACK, FIN...)</text>
+  <text x="675" y="390" font-size="18" fill="#1e3a8a" text-anchor="middle">Window Size (16 bits)</text>
+  
+  <text x="325" y="440" font-size="18" fill="#1e3a8a" text-anchor="middle">Checksum (16 bits)</text>
+  <text x="675" y="440" font-size="18" fill="#1e3a8a" text-anchor="middle">Urgent Pointer (16 bits)</text>
+  
+  <text x="500" y="485" font-size="16" fill="#64748b" text-anchor="middle">Options (Variable Length) &amp; Padding</text>
+
+
+  <g filter="url(#wobble)">
+    <rect x="80" y="550" width="840" height="230" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="8 4"/>
+  </g>
+  <text x="500" y="590" font-size="24" font-weight="bold" fill="#047857" text-anchor="middle">UDP Header (Exactly 8 Bytes)</text>
+  <text x="500" y="615" font-size="14" fill="#64748b" text-anchor="middle">Lightweight, stateless, and built purely for speed.</text>
+
+  <g filter="url(#wobble)">
+    <rect x="150" y="640" width="350" height="60" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+    <rect x="500" y="640" width="350" height="60" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+    
+    <rect x="150" y="700" width="350" height="60" fill="#f8fafc" stroke="#10b981" stroke-width="2"/>
+    <rect x="500" y="700" width="350" height="60" fill="#f8fafc" stroke="#10b981" stroke-width="2"/>
+  </g>
+
+  <text x="325" y="675" font-size="18" font-weight="bold" fill="#b91c1c" text-anchor="middle">Source Port (16 bits)</text>
+  <text x="675" y="675" font-size="18" font-weight="bold" fill="#b91c1c" text-anchor="middle">Destination Port (16 bits)</text>
+  
+  <text x="325" y="735" font-size="18" font-weight="bold" fill="#065f46" text-anchor="middle">Length (16 bits)</text>
+  <text x="675" y="735" font-size="18" font-weight="bold" fill="#065f46" text-anchor="middle">Checksum (16 bits)</text>
+
+</svg>
