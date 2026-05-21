@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" style="background-color: #FAFAFA; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1200" height="850" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <text x="500" y="50" font-size="34" font-weight="bold" fill="#0f172a" text-anchor="middle" letter-spacing="1">IPv4 Header Format</text>
+  <text x="500" y="80" font-size="16" fill="#64748b" text-anchor="middle">Standard size: 20 bytes (up to 60 bytes with Options)</text>
+
+  <text x="100" y="135" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">0</text>
+  <text x="200" y="135" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">4</text>
+  <text x="300" y="135" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">8</text>
+  <text x="500" y="135" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">16</text>
+  <text x="575" y="135" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">19</text>
+  <text x="900" y="135" font-size="14" font-weight="bold" fill="#475569" text-anchor="middle">31</text>
+  
+  <line x1="100" y1="140" x2="900" y2="140" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <g filter="url(#wobble)">
+    <rect x="100" y="150" width="100" height="60" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+    <rect x="200" y="150" width="100" height="60" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+    <rect x="300" y="150" width="200" height="60" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+    <rect x="500" y="150" width="400" height="60" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+
+    <rect x="100" y="210" width="400" height="60" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <rect x="500" y="210" width="75" height="60" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <rect x="575" y="210" width="325" height="60" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+
+    <rect x="100" y="270" width="200" height="60" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+    <rect x="300" y="270" width="200" height="60" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+    <rect x="500" y="270" width="400" height="60" fill="#f8fafc" stroke="#334155" stroke-width="2"/>
+
+    <rect x="100" y="330" width="800" height="60" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+
+    <rect x="100" y="390" width="800" height="60" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+
+    <rect x="100" y="450" width="800" height="60" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 6"/>
+  </g>
+
+  <text x="150" y="180" font-size="14" font-weight="bold" fill="#b91c1c" text-anchor="middle">Ver.</text>
+  <text x="150" y="198" font-size="11" fill="#b91c1c" text-anchor="middle">(4 bits)</text>
+  
+  <text x="250" y="180" font-size="14" font-weight="bold" fill="#c2410c" text-anchor="middle">IHL</text>
+  <text x="250" y="198" font-size="11" fill="#c2410c" text-anchor="middle">(4 bits)</text>
+  
+  <text x="400" y="180" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Type of Service</text>
+  <text x="400" y="198" font-size="12" fill="#64748b" text-anchor="middle">(8 bits)</text>
+  
+  <text x="700" y="180" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Total Length</text>
+  <text x="700" y="198" font-size="12" fill="#64748b" text-anchor="middle">(16 bits)</text>
+
+  <text x="300" y="240" font-size="16" font-weight="bold" fill="#15803d" text-anchor="middle">Identification</text>
+  <text x="300" y="258" font-size="12" fill="#16a34a" text-anchor="middle">(16 bits)</text>
+  
+  <text x="537.5" y="240" font-size="14" font-weight="bold" fill="#15803d" text-anchor="middle" transform="rotate(-90 537.5 240)">Flags</text>
+  
+  <text x="737.5" y="240" font-size="16" font-weight="bold" fill="#15803d" text-anchor="middle">Fragment Offset</text>
+  <text x="737.5" y="258" font-size="12" fill="#16a34a" text-anchor="middle">(13 bits)</text>
+
+  <text x="200" y="300" font-size="16" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Time to Live (TTL)</text>
+  <text x="200" y="318" font-size="12" fill="#3b82f6" text-anchor="middle">(8 bits)</text>
+  
+  <text x="400" y="300" font-size="16" font-weight="bold" fill="#7e22ce" text-anchor="middle">Protocol</text>
+  <text x="400" y="318" font-size="12" fill="#a855f7" text-anchor="middle">(8 bits)</text>
+  
+  <text x="700" y="300" font-size="16" font-weight="bold" fill="#334155" text-anchor="middle">Header Checksum</text>
+  <text x="700" y="318" font-size="12" fill="#64748b" text-anchor="middle">(16 bits)</text>
+
+  <text x="500" y="360" font-size="18" font-weight="bold" fill="#0891b2" text-anchor="middle">Source IP Address</text>
+  <text x="500" y="378" font-size="14" fill="#06b6d4" text-anchor="middle">(32 bits)</text>
+
+  <text x="500" y="420" font-size="18" font-weight="bold" fill="#0891b2" text-anchor="middle">Destination IP Address</text>
+  <text x="500" y="438" font-size="14" fill="#06b6d4" text-anchor="middle">(32 bits)</text>
+
+  <text x="500" y="485" font-size="16" font-style="italic" fill="#64748b" text-anchor="middle">Options (Variable Length, 0 - 40 Bytes) + Padding</text>
+
+  <g filter="url(#wobble)">
+    <path d="M 80,150 L 60,150 L 60,300 L 40,300 L 60,300 L 60,450 L 80,450" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  </g>
+  <text x="30" y="305" font-size="16" font-weight="bold" fill="#64748b" text-anchor="middle" transform="rotate(-90 30 305)">20 Bytes (Base)</text>
+
+</svg>
