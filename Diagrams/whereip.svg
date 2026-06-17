@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" style="background-color: #FAFAFA; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <!-- Sketchy Wobble Filter -->
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1300" height="800" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <!-- ====================================================================== -->
+  <!-- LAYER TITLES (LEFT SIDE) -->
+  <!-- ====================================================================== -->
+  <text x="140" y="110" font-size="20" fill="#334155" text-anchor="end">Application</text>
+  <text x="140" y="135" font-size="20" fill="#334155" text-anchor="end">layer</text>
+
+  <text x="140" y="230" font-size="20" fill="#334155" text-anchor="end">Transport</text>
+  <text x="140" y="255" font-size="20" fill="#334155" text-anchor="end">layer</text>
+
+  <text x="140" y="350" font-size="20" fill="#334155" text-anchor="end">Network</text>
+  <text x="140" y="375" font-size="20" fill="#334155" text-anchor="end">layer</text>
+
+  <text x="140" y="450" font-size="20" fill="#334155" text-anchor="end">Data-link</text>
+  <text x="140" y="475" font-size="20" fill="#334155" text-anchor="end">layer</text>
+  
+  <text x="140" y="515" font-size="20" fill="#334155" text-anchor="end">Physical</text>
+  <text x="140" y="540" font-size="20" fill="#334155" text-anchor="end">layer</text>
+
+
+  <!-- ====================================================================== -->
+  <!-- MAIN LAYER CONTAINERS (RIGHT SIDE) -->
+  <!-- ====================================================================== -->
+  <g filter="url(#wobble)">
+    <!-- App Layer Container -->
+    <rect x="180" y="80" width="850" height="75" fill="#f8fafc" stroke="#475569" stroke-width="3"/>
+    
+    <!-- Transport Layer Container -->
+    <rect x="180" y="200" width="850" height="75" fill="#f1f5f9" stroke="#475569" stroke-width="3"/>
+    
+    <!-- Network Layer Container -->
+    <rect x="180" y="320" width="850" height="85" fill="#e2e8f0" stroke="#475569" stroke-width="3"/>
+    
+    <!-- Data-link / Physical Container -->
+    <rect x="180" y="430" width="850" height="110" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+    <rect x="250" y="445" width="710" height="80" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  </g>
+
+
+  <!-- ====================================================================== -->
+  <!-- PROTOCOL BOXES -->
+  <!-- ====================================================================== -->
+  <g filter="url(#wobble)">
+    <!-- App Layer Protocols -->
+    <rect x="200" y="92" width="100" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="315" y="92" width="80" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="410" y="92" width="100" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="525" y="92" width="80" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="620" y="92" width="100" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="880" y="92" width="100" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    
+    <!-- Transport Layer Protocols -->
+    <rect x="200" y="212" width="220" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="460" y="212" width="280" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="780" y="212" width="200" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+
+    <!-- Network Layer Protocols (Highlighted in Blue) -->
+    <rect x="200" y="335" width="80" height="35" fill="#0ea5e9" stroke="#0284c7" stroke-width="2"/>
+    <rect x="290" y="335" width="80" height="35" fill="#0ea5e9" stroke="#0284c7" stroke-width="2"/>
+    <rect x="390" y="335" width="370" height="55" fill="#0ea5e9" stroke="#0284c7" stroke-width="2"/>
+    <rect x="780" y="360" width="80" height="30" fill="#0ea5e9" stroke="#0284c7" stroke-width="2"/>
+  </g>
+
+  <!-- ====================================================================== -->
+  <!-- PROTOCOL LABELS -->
+  <!-- ====================================================================== -->
+  <!-- App Layer Text -->
+  <text x="250" y="125" font-size="20" fill="#0f172a" text-anchor="middle">SMTP</text>
+  <text x="355" y="125" font-size="20" fill="#0f172a" text-anchor="middle">FTP</text>
+  <text x="460" y="125" font-size="20" fill="#0f172a" text-anchor="middle">TELNET</text>
+  <text x="565" y="125" font-size="20" fill="#0f172a" text-anchor="middle">DNS</text>
+  <text x="670" y="125" font-size="20" fill="#0f172a" text-anchor="middle">SNMP</text>
+  
+  <!-- The "..." indicating many more protocols -->
+  <circle cx="760" cy="117" r="4" fill="#0f172a"/>
+  <circle cx="790" cy="117" r="4" fill="#0f172a"/>
+  <circle cx="820" cy="117" r="4" fill="#0f172a"/>
+
+  <text x="930" y="125" font-size="20" fill="#0f172a" text-anchor="middle">DHCP</text>
+
+  <!-- Transport Layer Text -->
+  <text x="310" y="245" font-size="20" fill="#0f172a" text-anchor="middle">SCTP</text>
+  <text x="600" y="245" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle">TCP</text>
+  <text x="880" y="245" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle">UDP</text>
+
+  <!-- Network Layer Text -->
+  <text x="240" y="360" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">IGMP</text>
+  <text x="330" y="360" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">ICMP</text>
+  <text x="575" y="370" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">IP</text>
+  <text x="820" y="382" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">ARP</text>
+
+  <!-- Bottom Layer Text -->
+  <text x="605" y="480" font-size="22" fill="#0f172a" text-anchor="middle">Underlying LAN or WAN</text>
+  <text x="605" y="510" font-size="22" fill="#0f172a" text-anchor="middle">technology</text>
+
+</svg>
