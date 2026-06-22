@@ -15,5 +15,5 @@
 ### Networking Layer versus transport layer
 
 * **Network Layer (Device-to-Device):** Uses IP addresses to move data between physical computers. *(Getting the package to the right building).*
-![Encapsulation/Decapsulation](/Diagrams/p2b.svg)
+![Encapsulation/Decapsulation](/Diagrams/ptop.svg)
 * **Transport Layer (Process-to-Process):** Uses Port numbers (TCP/UDP) to connect specific applications running on those computers. *(Delivering the package to the exact right room).*
