@@ -32,5 +32,14 @@ Flow control ensures that the sender does not overwhelm the receiver with too mu
 - The receiver transport layer can buffer, process, and deliver data smoothly to the application process.
 
 
+![Flow Control](/Transport%20Layer/Diagrams/flow.svg)
+
+- Sender Application to Transport: The App pushes data down. If the Transport layer's memory buffer fills up, it uses a flow control signal to tell the App to pause.
+
+- Across the Network: The Sender Transport pushes packets across the internet to the Receiver Transport. The Receiver uses network-level flow control (like TCP Window Size) to tell the Sender to throttle its speed if necessary.
+
+- Receiver Transport to Application: The receiving App pulls the data up from the Transport layer exactly when it is ready to process it.
+
+
 
 

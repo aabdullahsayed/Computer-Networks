@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" style="background-color: #FAFAFA; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1300" height="950" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#334155" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="550" y="60" font-size="36" font-weight="bold" fill="#0f172a" text-anchor="middle">Flow Control</text>
+
+  <g filter="url(#wobble)">
+    <rect x="150" y="150" width="120" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="400" y="150" width="120" height="50" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+    
+    <line x1="270" y1="175" x2="385" y2="175" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <path d="M 460,150 L 460,110 L 210,110 L 210,135" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+    <circle cx="335" cy="110" r="12" fill="#0f172a"/>
+    <circle cx="335" cy="175" r="12" fill="#0f172a"/>
+  </g>
+  <text x="210" y="182" font-size="18" fill="#334155" text-anchor="middle">Producer</text>
+  <text x="460" y="182" font-size="18" fill="#334155" text-anchor="middle">Consumer</text>
+  <text x="335" y="115" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="335" y="180" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="335" y="135" font-size="16" fill="#475569" text-anchor="middle">Flow control</text>
+  <text x="335" y="200" font-size="16" fill="#475569" text-anchor="middle">Delivery</text>
+  <text x="335" y="235" font-size="22" font-weight="bold" fill="#0f172a" text-anchor="middle">a. Pushing</text>
+
+
+  <g filter="url(#wobble)">
+    <rect x="600" y="150" width="120" height="50" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <rect x="850" y="150" width="120" height="50" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+    
+    <line x1="720" y1="175" x2="835" y2="175" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <path d="M 910,150 L 910,110 L 660,110 L 660,135" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
+    <circle cx="785" cy="110" r="12" fill="#0f172a"/>
+    <circle cx="785" cy="175" r="12" fill="#0f172a"/>
+  </g>
+  <text x="660" y="182" font-size="18" fill="#334155" text-anchor="middle">Producer</text>
+  <text x="910" y="182" font-size="18" fill="#334155" text-anchor="middle">Consumer</text>
+  <text x="785" y="115" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="785" y="180" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="785" y="135" font-size="16" fill="#475569" text-anchor="middle">Request</text>
+  <text x="785" y="200" font-size="16" fill="#475569" text-anchor="middle">Delivery</text>
+  <text x="785" y="235" font-size="22" font-weight="bold" fill="#0f172a" text-anchor="middle">b. Pulling</text>
+
+
+  <text x="100" y="310" font-size="20" fill="#0f172a" text-anchor="start">• Flow control at transport layer: two buffers at sending and receiving transport layer</text>
+
+  <text x="320" y="340" font-size="16" fill="#475569" text-anchor="middle">Sender</text>
+  <text x="210" y="380" font-size="16" fill="#334155" text-anchor="end">Application</text>
+  <text x="210" y="400" font-size="16" fill="#334155" text-anchor="end">layer</text>
+  
+  <text x="210" y="550" font-size="16" fill="#334155" text-anchor="end">Transport</text>
+  <text x="210" y="570" font-size="16" fill="#334155" text-anchor="end">layer</text>
+
+  <g filter="url(#wobble)">
+    <rect x="250" y="355" width="130" height="55" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+    <rect x="254" y="359" width="130" height="55" fill="none" stroke="#94a3b8" stroke-width="1.5"/> <rect x="265" y="367" width="100" height="30" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+    
+    <rect x="240" y="525" width="130" height="75" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+    <rect x="244" y="529" width="130" height="75" fill="none" stroke="#94a3b8" stroke-width="1.5"/> <rect x="255" y="535" width="100" height="25" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    <rect x="255" y="565" width="100" height="25" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+
+    <line x1="290" y1="420" x2="290" y2="510" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 380,550 L 430,550 L 430,380 L 395,380" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+  
+  <text x="315" y="388" font-size="16" fill="#334155" text-anchor="middle">Producer</text>
+  <text x="305" y="553" font-size="14" fill="#334155" text-anchor="middle">Consumer</text>
+  <text x="305" y="583" font-size="14" fill="#334155" text-anchor="middle">Producer</text>
+  
+  <text x="240" y="460" font-size="16" fill="#475569" text-anchor="end">Messages</text>
+  <text x="240" y="480" font-size="16" fill="#475569" text-anchor="end">are pushed</text>
+  <text x="440" y="455" font-size="18" fill="#475569" text-anchor="start">Flow</text>
+  <text x="440" y="475" font-size="18" fill="#475569" text-anchor="start">control</text>
+
+
+  <text x="760" y="340" font-size="16" fill="#475569" text-anchor="middle">Receiver</text>
+  <text x="860" y="380" font-size="16" fill="#334155" text-anchor="start">Application</text>
+  <text x="860" y="400" font-size="16" fill="#334155" text-anchor="start">layer</text>
+
+  <text x="860" y="550" font-size="16" fill="#334155" text-anchor="start">Transport</text>
+  <text x="860" y="570" font-size="16" fill="#334155" text-anchor="start">layer</text>
+
+  <g filter="url(#wobble)">
+    <rect x="710" y="355" width="130" height="55" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+    <rect x="714" y="359" width="130" height="55" fill="none" stroke="#94a3b8" stroke-width="1.5"/> <rect x="725" y="367" width="100" height="30" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+    
+    <rect x="710" y="525" width="130" height="75" fill="#f1f5f9" stroke="#334155" stroke-width="2"/>
+    <rect x="714" y="529" width="130" height="75" fill="none" stroke="#94a3b8" stroke-width="1.5"/> <rect x="725" y="535" width="100" height="25" fill="#cbd5e1" stroke="#334155" stroke-width="1.5"/>
+    <rect x="725" y="565" width="100" height="25" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+
+    <line x1="740" y1="420" x2="740" y2="510" stroke="#334155" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
+    <line x1="820" y1="510" x2="820" y2="425" stroke="#334155" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+
+  <text x="775" y="388" font-size="16" fill="#334155" text-anchor="middle">Consumer</text>
+  <text x="775" y="553" font-size="14" fill="#334155" text-anchor="middle">Producer</text>
+  <text x="775" y="583" font-size="14" fill="#334155" text-anchor="middle">Consumer</text>
+
+  <text x="725" y="470" font-size="16" fill="#475569" text-anchor="end">Requests</text>
+  <text x="830" y="450" font-size="16" fill="#475569" text-anchor="start">Messages</text>
+  <text x="830" y="470" font-size="16" fill="#475569" text-anchor="start">are pulled</text>
+
+  <g filter="url(#wobble)">
+    <line x1="380" y1="580" x2="695" y2="580" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M 760,610 L 760,640 L 260,640 L 260,615" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
+  <text x="540" y="570" font-size="14" fill="#475569" text-anchor="middle">Packets are pushed</text>
+  <text x="540" y="660" font-size="16" font-weight="bold" fill="#475569" text-anchor="middle">Flow control</text>
+
+</svg>
