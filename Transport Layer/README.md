@@ -16,7 +16,7 @@
 
 * **Network Layer (Device-to-Device):** Uses IP addresses to move data between physical computers. *(Getting the package to the right building).*
 
-![Process to Process](/Diagrams/ptop.svg)
+![Process to Process](/Transport%20Layer/Diagrams/ptop.svg)
 
 * **Transport Layer (Process-to-Process):** Uses Port numbers (TCP/UDP) to connect specific applications running on those computers. *(Delivering the package to the exact right room).*
 
@@ -30,4 +30,7 @@ Flow control ensures that the sender does not overwhelm the receiver with too mu
 - The sender transport layer doesn’t flood the receiver.
 
 - The receiver transport layer can buffer, process, and deliver data smoothly to the application process.
+
+
+
 
