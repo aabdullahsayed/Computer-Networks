@@ -32,7 +32,6 @@
 - Process to Process, Stream delivery Service, Buffering, Multiplexing/Demultiplexing
 
 <img src="/Diagrams/tcp-udp.svg">
-![TCP-UDP](/Transport%20Layer/Diagrams/tcp-udp.svg)
 
 ### Characteristics of UDP
 - Connectionless
