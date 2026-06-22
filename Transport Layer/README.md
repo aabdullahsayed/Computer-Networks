@@ -11,3 +11,9 @@
 - Decapsulation: Decapsulation refers to the removal of all these additional information and extraction of originally existing data, and this process continues till the last layer i.e. the Application Layer.
 
 ![Encapsulation/Decapsulation](/Diagrams/encap-decap.svg)
+
+### Networking Layer versus transport layer
+
+* **Network Layer (Device-to-Device):** Uses IP addresses to move data between physical computers. *(Getting the package to the right building).*
+![Encapsulation/Decapsulation](/Diagrams/p2b.svg)
+* **Transport Layer (Process-to-Process):** Uses Port numbers (TCP/UDP) to connect specific applications running on those computers. *(Delivering the package to the exact right room).*

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" style="background-color: #FAFAFA; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1300" height="900" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 8 1 L 2 5 L 8 9" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-end" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 2 1 L 8 5 L 2 9" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="550" y="80" font-size="36" font-weight="bold" fill="#0f172a" text-anchor="middle">Process-to-Process Communications</text>
+  <text x="550" y="130" font-size="20" fill="#1e293b" text-anchor="middle">• Network layer versus transport layer</text>
+
+  <g filter="url(#wobble)">
+    <rect x="180" y="220" width="50" height="70" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+    <rect x="183" y="223" width="50" height="70" fill="none" stroke="#475569" stroke-width="1"/> <circle cx="250" cy="255" r="3" fill="#0f172a"/>
+    <circle cx="265" cy="255" r="3" fill="#0f172a"/>
+    <circle cx="280" cy="255" r="3" fill="#0f172a"/>
+    
+    <rect x="300" y="220" width="50" height="70" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+    <rect x="303" y="223" width="50" height="70" fill="none" stroke="#475569" stroke-width="1"/>
+  </g>
+  <text x="370" y="265" font-size="20" fill="#334155">Processes</text>
+
+  <g filter="url(#wobble)">
+    <polygon points="230,370 270,390 280,340 245,325" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+    <polygon points="230,370 260,400 310,380 270,390" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+  </g>
+  <text x="320" y="380" font-size="20" fill="#334155">Client</text>
+
+  <g filter="url(#wobble)">
+    <path d="M 460,400 Q 440,360 480,330 Q 550,300 620,330 Q 670,350 680,410 Q 650,460 560,460 Q 480,450 460,400 Z" fill="#f8fafc" stroke="#94a3b8" stroke-width="3"/>
+    <path d="M 460,410 Q 560,450 670,420" fill="none" stroke="#cbd5e1" stroke-width="15" opacity="0.5"/>
+    <path d="M 470,430 Q 560,460 650,440" fill="none" stroke="#94a3b8" stroke-width="15" opacity="0.3"/>
+    
+    <line x1="285" y1="385" x2="455" y2="425" stroke="#334155" stroke-width="2"/>
+    <line x1="680" y1="420" x2="810" y2="385" stroke="#334155" stroke-width="2"/>
+  </g>
+  <text x="560" y="395" font-size="22" fill="#0f172a" text-anchor="middle">Internet</text>
+
+  <g filter="url(#wobble)">
+    <rect x="750" y="220" width="50" height="70" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+    <rect x="753" y="223" width="50" height="70" fill="none" stroke="#475569" stroke-width="1"/>
+    
+    <circle cx="820" cy="255" r="3" fill="#0f172a"/>
+    <circle cx="835" cy="255" r="3" fill="#0f172a"/>
+    <circle cx="850" cy="255" r="3" fill="#0f172a"/>
+    
+    <rect x="870" y="220" width="50" height="70" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+    <rect x="873" y="223" width="50" height="70" fill="none" stroke="#475569" stroke-width="1"/>
+  </g>
+  <text x="735" y="265" font-size="20" fill="#334155" text-anchor="end">Processes</text>
+
+  <g filter="url(#wobble)">
+    <polygon points="810,340 830,350 830,420 810,400" fill="#cbd5e1" stroke="#475569" stroke-width="2"/>
+    <polygon points="810,340 830,320 850,330 830,350" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+    <polygon points="830,350 850,330 850,390 830,420" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+    <circle cx="820" cy="360" r="2" fill="#475569"/>
+    <line x1="815" y1="380" x2="825" y2="385" stroke="#475569" stroke-width="2"/>
+    <line x1="815" y1="385" x2="825" y2="390" stroke="#475569" stroke-width="2"/>
+    <line x1="815" y1="390" x2="825" y2="395" stroke="#475569" stroke-width="2"/>
+  </g>
+  <text x="795" y="380" font-size="20" fill="#334155" text-anchor="end">Server</text>
+
+  <g filter="url(#wobble)">
+    <line x1="160" y1="290" x2="110" y2="600" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+    <line x1="940" y1="290" x2="990" y2="600" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+
+    <line x1="260" y1="410" x2="260" y2="530" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+    <line x1="830" y1="430" x2="830" y2="530" stroke="#475569" stroke-width="2" stroke-dasharray="8 6"/>
+
+    <line x1="265" y1="510" x2="825" y2="510" stroke="#334155" stroke-width="2.5" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+    
+    <line x1="120" y1="580" x2="980" y2="580" stroke="#334155" stroke-width="2.5" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+  </g>
+
+  <text x="550" y="495" font-size="22" font-weight="bold" fill="#475569" text-anchor="middle">Domain of network-layer protocol</text>
+  <text x="550" y="565" font-size="22" font-weight="bold" fill="#475569" text-anchor="middle">Domain of transport-layer protocol</text>
+
+</svg>
