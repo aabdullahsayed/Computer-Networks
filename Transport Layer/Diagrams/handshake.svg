@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" style="background-color: #FAFAFA; font-family: 'Comic Sans MS', 'Chalkboard SE', 'Caveat', 'Kalam', cursive, sans-serif;">
+  <defs>
+    <filter id="wobble" filterUnits="userSpaceOnUse" x="-100" y="-100" width="1200" height="850" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="50" font-size="32" font-weight="bold" fill="#0f172a" text-anchor="middle">TCP Three-Way Handshaking (Connection Establishment)</text>
+
+  <text x="200" y="110" font-size="24" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Client</text>
+  <text x="800" y="110" font-size="24" font-weight="bold" fill="#b45309" text-anchor="middle">Server</text>
+  
+  <text x="200" y="130" font-size="16" fill="#64748b" text-anchor="middle">Active Open</text>
+  <text x="800" y="130" font-size="16" fill="#64748b" text-anchor="middle">Passive Open</text>
+
+  <g filter="url(#wobble)">
+    <line x1="200" y1="150" x2="200" y2="600" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 6"/>
+    <line x1="800" y1="150" x2="800" y2="600" stroke="#94a3b8" stroke-width="2" stroke-dasharray="8 6"/>
+  </g>
+  <text x="200" y="620" font-size="16" fill="#64748b" text-anchor="middle">Time</text>
+  <text x="800" y="620" font-size="16" fill="#64748b" text-anchor="middle">Time</text>
+
+  <g filter="url(#wobble)">
+    <path d="M 200,200 L 780,280" fill="none" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="400" y="195" width="200" height="50" rx="4" fill="#f1f5f9" stroke="#334155" stroke-width="2" transform="rotate(8 500 220)"/>
+  </g>
+  <text x="500" y="215" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle" transform="rotate(8 500 220)">1. SYN</text>
+  <text x="500" y="235" font-size="14" fill="#334155" text-anchor="middle" transform="rotate(8 500 220)">seq: 8000</text>
+
+  <g filter="url(#wobble)">
+    <path d="M 800,320 L 220,400" fill="none" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="400" y="315" width="200" height="70" rx="4" fill="#fef3c7" stroke="#b45309" stroke-width="2" transform="rotate(-8 500 350)"/>
+  </g>
+  <text x="500" y="340" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle" transform="rotate(-8 500 350)">2. SYN + ACK</text>
+  <text x="500" y="360" font-size="14" fill="#92400e" text-anchor="middle" transform="rotate(-8 500 350)">seq: 15000</text>
+  <text x="500" y="375" font-size="14" fill="#92400e" text-anchor="middle" transform="rotate(-8 500 350)">ack: 8001</text>
+
+  <g filter="url(#wobble)">
+    <path d="M 200,440 L 780,520" fill="none" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="400" y="445" width="200" height="70" rx="4" fill="#dcfce7" stroke="#15803d" stroke-width="2" transform="rotate(8 500 480)"/>
+  </g>
+  <text x="500" y="470" font-size="16" font-weight="bold" fill="#0f172a" text-anchor="middle" transform="rotate(8 500 480)">3. ACK</text>
+  <text x="500" y="490" font-size="14" fill="#166534" text-anchor="middle" transform="rotate(8 500 480)">seq: 8001</text>
+  <text x="500" y="505" font-size="14" fill="#166534" text-anchor="middle" transform="rotate(8 500 480)">ack: 15001</text>
+
+  <text x="100" y="440" font-size="16" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Connection</text>
+  <text x="100" y="460" font-size="16" font-weight="bold" fill="#1d4ed8" text-anchor="middle">Opened</text>
+  
+  <text x="900" y="520" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">Connection</text>
+  <text x="900" y="540" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">Opened</text>
+
+</svg>

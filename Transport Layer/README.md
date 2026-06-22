@@ -158,3 +158,6 @@ Congestion control is necessary to keep the total network load below its actual 
 * **Connection to Network Layer:** Congestion at the transport layer is directly caused by congestion happening at the network layer. Managing this is a critical issue for maintaining overall internet performance and stability.
 
 
+### TCP
+
+![Flow Control](/Transport%20Layer/Diagrams/handshake.svg)
