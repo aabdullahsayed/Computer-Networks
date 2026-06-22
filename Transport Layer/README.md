@@ -161,3 +161,5 @@ Congestion control is necessary to keep the total network load below its actual 
 ### TCP
 
 ![Flow Control](/Transport%20Layer/Diagrams/handshake.svg)
+
+A SYN segment consumes one sequence number, even though it carries no data. Therefore, the Server acknowledges seq: 8000 by returning ack: 8001.  A SYN + ACK segment also consumes one sequence number. The Client acknowledges seq: 15000 by returning ack: 15001.  An ACK segment carrying no data does not consume a sequence number. Connection termination follows a similar three-way pattern utilizing the FIN flag.  
